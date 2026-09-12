@@ -195,7 +195,7 @@
       display: block;
       transform: rotate(90deg);
       white-space: nowrap;
-      font-weight: 500;
+      font-weight: 300;
     }
 
     main {
@@ -683,65 +683,7 @@
   tick();
   setInterval(tick, 1000);
 
-  // —— Datos demo si no hay corpus-data.js ——
-  const cardDocs = window.cardDocs || [
-    {
-      id: "do-1990-01-03",
-      title: "Diario Oficial — 3 de enero de 1990",
-      meta: "Núm. 33.560 · Poder Ejecutivo",
-      excerpt: "Edición con decretos del Ministerio del Interior, Economía, Educación, Justicia y Trabajo. Incluye renuncias de alcaldes de la V Región y concesiones de pensión.",
-      tall: true,
-      news: {
-        url: "https://www.diariooficial.interior.gob.cl/",
-        label: "FUENTE",
-        headline: "Diario Oficial de la República de Chile",
-        image: null
-      },
-      detail: {
-        eyebrow: "Edición",
-        title: "Diario Oficial Núm. 33.560",
-        desc: "Publicación del 3 de enero de 1990. Segmentada en actos individuales para búsqueda por texto completo.",
-        subtitle: "Ministerios: Interior, Economía, Educación, Justicia, Transportes, Trabajo"
-      }
-    },
-    {
-      id: "interior-1989",
-      title: "Ministerio del Interior",
-      meta: "Decretos · 1989–1990",
-      excerpt: "Renuncias de alcaldes, pensiones de gracia y actos administrativos de la V Región y otras zonas.",
-      news: {
-        url: "https://www.interior.gob.cl/",
-        label: "SECCIÓN",
-        headline: "Actos del Poder Ejecutivo — Interior",
-        image: null
-      },
-      detail: {
-        eyebrow: "Sección",
-        title: "Ministerio del Interior",
-        desc: "Decretos de nombramientos, renuncias y pensiones publicados en el Diario Oficial.",
-        subtitle: "Fuente: Diario Oficial"
-      }
-    },
-    {
-      id: "economia-marcas",
-      title: "Economía — Marcas y patentes",
-      meta: "Solicitudes · Diario Oficial",
-      excerpt: "Publicaciones de marcas comerciales, patentes de invención y cooperativas en la sección de Economía.",
-      news: {
-        url: "https://www.economia.gob.cl/",
-        label: "SECCIÓN",
-        headline: "Marcas, patentes y sociedades",
-        image: null
-      },
-      detail: {
-        eyebrow: "Sección",
-        title: "Ministerio de Economía",
-        desc: "Avisos de marcas, patentes y constitución de sociedades anónimas y limitadas.",
-        subtitle: "Fuente: Diario Oficial"
-      }
-    }
-  ];
-
+ 
   const archiveDocs = window.archiveDocs || [
     {
       id: "do-1990-01-03-001",
