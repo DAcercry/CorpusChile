@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificando acceso — CorpusChile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #111827;
+    --ink-soft: #374151;
+    --grey: #6B7280;
+    --grey-line: #D8DCE3;
+    --paper: #FCFCFB;
+    --paper-raised: #FFFFFF;
+    --accent: #003B82;
+    --accent-deep: #002A5C;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+  }
+  html[data-theme="dark"]{
+    --ink: #EDEAF4;
+    --ink-soft: #C9C3DA;
+    --grey: #8B84A3;
+    --grey-line: #322C42;
+    --paper: #15121D;
+    --paper-raised: #1C1826;
+    --accent: #9D6DF0;
+    --accent-deep: #B892F5;
+  }
+  html{ background: var(--paper); }
+  *{ box-sizing: border-box; }
+  ::selection{ background: var(--accent); color: #fff; }
+  body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--paper);
+  }
+
+  .gate{
+    width: 100%;
+    max-width: 380px;
+    padding: 32px 28px;
+    text-align: center;
+  }
+
+  .gate-logo{
+    height: 56px;
+    margin-bottom: 22px;
+    animation: spin 1.4s linear infinite;
+  }
+  html[data-theme="dark"] .gate-logo{ filter: invert(1) brightness(1.1); }
+  @keyframes spin{ to{ transform: rotate(360deg); } }
+  .gate-logo.done{ animation: none; }
+
+  .gate-status{
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin: 0 0 4px;
+  }
+  .gate-doc-title{
+    font-size: 12.5px;
+    color: var(--grey);
+    margin: 0 0 6px;
+    min-height: 16px;
+  }
+
+  .gate-card{
+    display: none;
+    margin-top: 18px;
+    padding-top: 22px;
+    border-top: 1px solid var(--grey-line);
+    text-align: left;
+  }
+  .gate-card.visible{ display: block; }
+  .gate-card h2{
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  .gate-card p{
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin: 0 0 16px;
+  }
+  .gate-card input{
+    width: 100%;
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--grey-line);
+    border-radius: 3px;
+    padding: 9px 11px;
+    margin-bottom: 10px;
+  }
+  .gate-card input:focus{ outline: none; border-color: var(--accent); }
+  .gate-actions{
+    display: flex;
+    gap: 8px;
+  }
+  .gate-btn{
+    flex: 1;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-radius: 3px;
+    border: 1px solid var(--grey-line);
+    cursor: pointer;
+    background: var(--paper-raised);
+    color: var(--ink);
+  }
+  .gate-btn.primary{
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .gate-btn.primary:hover{ background: var(--accent-deep); border-color: var(--accent-deep); }
+  .gate-btn:not(.primary):hover{ border-color: var(--accent); color: var(--accent); }
+  .gate-note{
+    font-size: 11px;
+    color: var(--grey);
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="gate">
+    <img class="gate-logo" id="gateLogo" src="assets/logo-color.png" alt="CorpusChile">
+    <p class="gate-status" id="gateStatus">Verificando acceso…</p>
+    <p class="gate-doc-title" id="gateDocTitle"></p>
+
+    <div class="gate-card" id="gateCard">
+      <h2>Necesitas una cuenta para descargar</h2>
+      <p>Los documentos completos del archivo del Diario Oficial están disponibles para usuarios registrados de CorpusChile.</p>
+      <input type="text" id="gateName" placeholder="Tu nombre o correo">
+      <div class="gate-actions">
+        <button class="gate-btn primary" id="gateCreate">Crear cuenta</button>
+        <button class="gate-btn" id="gateLogin">Iniciar sesión</button>
+      </div>
+      <p class="gate-note">Simulado para esta demo — no se envían datos a ningún servidor.</p>
+    </div>
+  </div>
+
+<script>
+  const params = new URLSearchParams(location.search);
+  const fileUrl = params.get('file');
+  const docTitle = params.get('title') || '';
+
+  document.getElementById('gateDocTitle').textContent = docTitle;
+
+  const gateLogo = document.getElementById('gateLogo');
+  const gateStatus = document.getElementById('gateStatus');
+  const gateCard = document.getElementById('gateCard');
+
+  function goToFile(){
+    if(fileUrl){
+      window.location.href = fileUrl;
+    }
+  }
+
+  function hasAccount(){
+    return !!localStorage.getItem('corpuschile_account');
+  }
+
+  function grantAccessAndContinue(name){
+    if(name){
+      localStorage.setItem('corpuschile_account', name);
+    } else {
+      localStorage.setItem('corpuschile_account', 'invitado');
+    }
+    gateCard.classList.remove('visible');
+    gateLogo.classList.remove('done');
+    gateStatus.textContent = 'Acceso verificado, abriendo documento…';
+    setTimeout(goToFile, 700);
+  }
+
+  // Simula una verificación en segundo plano (sin backend real: solo
+  // revisa si ya existe una "cuenta" guardada en este navegador).
+  setTimeout(() => {
+    if(!fileUrl){
+      gateStatus.textContent = 'Falta el documento a abrir.';
+      gateLogo.classList.add('done');
+      return;
+    }
+    if(hasAccount()){
+      gateStatus.textContent = 'Acceso verificado, abriendo documento…';
+      gateLogo.classList.add('done');
+      setTimeout(goToFile, 500);
+    } else {
+      gateLogo.classList.add('done');
+      gateStatus.textContent = 'No encontramos una cuenta asociada';
+      gateCard.classList.add('visible');
+    }
+  }, 1100);
+
+  document.getElementById('gateCreate').addEventListener('click', () => {
+    const name = document.getElementById('gateName').value.trim();
+    grantAccessAndContinue(name);
+  });
+  document.getElementById('gateLogin').addEventListener('click', () => {
+    const name = document.getElementById('gateName').value.trim();
+    grantAccessAndContinue(name);
+  });
+
+  // Modo oscuro/claro heredado del sitio principal, si el navegador ya lo tenía activado.
+  if(localStorage.getItem('corpuschile_theme') === 'dark'){
+    document.documentElement.dataset.theme = 'dark';
+  }
+</script>
+
+</body>
+</html>
