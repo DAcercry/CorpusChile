@@ -1,0 +1,53 @@
+// Documentos de demostración (sin el decreto completo)
+const DOCUMENTS = [
+  {
+    id: 1,
+    title: "Decreto Supremo N° 240 – Normas de Seguridad Vial",
+    type: "decreto",
+    date: "2023-04-12",
+    source: "Diario Oficial",
+    author: "Ministerio de Transportes",
+    excerpt: "Establece nuevas normas técnicas para la señalización y demarcación de vías urbanas...",
+    content: "EXTRACTO DEMO:\n\nArtículo 1°.- Las municipalidades deberán implementar señalética reflectante en un plazo de 18 meses...\n\nArtículo 2°.- Se prohíbe el uso de publicidad en semáforos...\n\n(Texto completo del decreto se omitió para reducir el peso del prototipo. En la versión final se cargará desde un archivo externo o base de datos)."
+  },
+  {
+    id: 2,
+    title: "Ley 21.430 – Sobre Garantías y Protección Integral de los Derechos de la Niñez",
+    type: "ley",
+    date: "2022-03-15",
+    source: "Biblioteca del Congreso Nacional",
+    author: "Congreso Nacional",
+    excerpt: "Establece el Sistema de Garantías y Protección Integral de los Derechos de la Niñez y Adolescencia...",
+    content: "EXTRACTO DEMO:\n\nLa presente ley tiene por objeto la creación del Sistema de Garantías y Protección Integral de los Derechos de la Niñez y Adolescencia...\n\nPrincipios: interés superior del niño, autonomía progresiva, no discriminación..."
+  },
+  {
+    id: 3,
+    title: "Resolución Exenta N° 1.245 – Actualización de Tasas de Interés",
+    type: "resolucion",
+    date: "2024-01-08",
+    source: "Banco Central / SBIF",
+    author: "Superintendencia de Bancos",
+    excerpt: "Fija las tasas máximas convencionales para operaciones de crédito de dinero...",
+    content: "EXTRACTO DEMO:\n\nSe actualizan las tasas de interés máximas para el período comprendido entre el 1 de enero y el 31 de marzo de 2024..."
+  },
+  {
+    id: 4,
+    title: "Circular N° 3.582 – Instrucciones sobre Prevención de Lavado de Activos",
+    type: "otro",
+    date: "2023-11-22",
+    source: "UAF",
+    author: "Unidad de Análisis Financiero",
+    excerpt: "Actualiza las obligaciones de debida diligencia y reporte de operaciones sospechosas...",
+    content: "EXTRACTO DEMO:\n\nLas entidades obligadas deberán implementar sistemas de monitoreo continuo y reportar dentro de 24 horas cualquier operación que genere sospecha razonable..."
+  },
+  {
+    id: 5,
+    title: "Decreto 15 – Reglamento del Sistema Nacional de Áreas Protegidas",
+    type: "decreto",
+    date: "2021-09-30",
+    source: "Ministerio del Medio Ambiente",
+    author: "MMA",
+    excerpt: "Regula la creación, administración y categorías de áreas protegidas del Estado...",
+    content: "EXTRACTO DEMO:\n\nSe definen las categorías: Parque Nacional, Reserva Nacional, Monumento Natural, Santuario de la Naturaleza..."
+  }
+];
