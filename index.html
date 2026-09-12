@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CorpusChile — Buscador documental</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --card: #fff;
+      --text: #212121;
+      --text-soft: #616161;
+      --accent: #5e35b1;
+      --accent-hover: #4527a0;
+      --border: #e0e0e0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Roboto", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .hero {
+      text-align: center;
+      max-width: 560px;
+    }
+    .hero h1 {
+      font-size: 1.9rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    .hero p {
+      color: var(--text-soft);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+    .search-box {
+      display: flex;
+      max-width: 480px;
+      margin: 0 auto 20px;
+    }
+    .search-box input {
+      flex: 1;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-right: none;
+      border-radius: 6px 0 0 6px;
+      font-size: 1rem;
+      outline: none;
+    }
+    .search-box input:focus { border-color: var(--accent); }
+    .search-box button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 0 20px;
+      border-radius: 0 6px 6px 0;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    .search-box button:hover { background: var(--accent-hover); }
+    .link-busqueda {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .link-busqueda:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      padding: 16px;
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">CorpusChile</a>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Buscador documental</h1>
+      <p>Normas, decretos, resoluciones y publicaciones oficiales de Chile.</p>
+
+      <form class="search-box" action="Busqueda/" method="get">
+        <input type="text" name="q" placeholder="Buscar en CorpusChile..." aria-label="Buscar" autofocus>
+        <button type="submit">Buscar</button>
+      </form>
+
+      <a class="link-busqueda" href="Busqueda/">Ir a la página de búsqueda →</a>
+    </div>
+  </main>
+
+  <footer>
+    CorpusChile · Prototipo
+  </footer>
+</body>
+</html>
