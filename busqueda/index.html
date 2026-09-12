@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CorpusChile — Resultados de búsqueda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --card: #ffffff;
+      --text: #212121;
+      --text-soft: #616161;
+      --border: #e0e0e0;
+      --accent: #5e35b1;
+      --accent-hover: #4527a0;
+      --danger: #e53935;
+      --danger-hover: #c62828;
+      --badge: #5e35b1;
+      --header-bg: #ffffff;
+      --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    html[data-theme="dark"] {
+      --bg: #121212;
+      --card: #1e1e1e;
+      --text: #e0e0e0;
+      --text-soft: #9e9e9e;
+      --border: #333;
+      --accent: #b39ddb;
+      --accent-hover: #d1c4e9;
+      --danger: #ef5350;
+      --danger-hover: #e57373;
+      --badge: #7e57c2;
+      --header-bg: #1e1e1e;
+      --shadow: 0 1px 3px rgba(0,0,0,0.4);
+    }
+
+    html[data-theme="high-contrast"] {
+      --bg: #000;
+      --card: #000;
+      --text: #fff;
+      --text-soft: #fff;
+      --border: #fff;
+      --accent: #ffff00;
+      --accent-hover: #ffff66;
+      --danger: #ff0000;
+      --badge: #ffff00;
+      --header-bg: #000;
+      --shadow: none;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Roboto", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    /* —— Top search bar —— */
+    .search-bar {
+      background: var(--header-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow);
+    }
+
+    .search-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .search-input-wrap {
+      display: flex;
+      flex: 1;
+      min-width: 220px;
+      max-width: 520px;
+    }
+
+    .search-input-wrap input {
+      flex: 1;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-right: none;
+      border-radius: 4px 0 0 4px;
+      font-size: 0.95rem;
+      background: var(--card);
+      color: var(--text);
+      outline: none;
+    }
+
+    .search-input-wrap input:focus {
+      border-color: var(--accent);
+    }
+
+    .search-btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 0 16px;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+    }
+
+    .search-btn:hover { background: var(--accent-hover); }
+
+    .tools {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-left: auto;
+      flex-wrap: wrap;
+    }
+
+    .tool-switch {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .tool-switch input {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    .seleccion {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      text-decoration: none;
+      position: relative;
+    }
+
+    .seleccion .badge {
+      background: var(--danger);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* —— Breadcrumb + Volver —— */
+    .page-header {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 20px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .breadcrumb {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .breadcrumb a {
+      color: var(--text-soft);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb strong { color: var(--text); font-weight: 500; }
+
+    .btn-volver {
+      border: 1px solid var(--danger);
+      color: var(--danger);
+      background: transparent;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s;
+    }
+
+    .btn-volver:hover {
+      background: var(--danger);
+      color: #fff;
+    }
+
+    /* —— Toolbar (download + pagination) —— */
+    .toolbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 8px 20px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .btn-download {
+      background: none;
+      border: none;
+      color: var(--text-soft);
+      cursor: pointer;
+      font-size: 1.35rem;
+      padding: 4px;
+    }
+
+    .btn-download:hover { color: var(--accent); }
+
+    .pagination {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: var(--text-soft);
+    }
+
+    .pagination select {
+      padding: 4px 8px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--card);
+      color: var(--text);
+      font-size: 0.85rem;
+    }
+
+    .page-btn {
+      background: #90a4ae;
+      color: #fff;
+      border: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+
+    .page-btn:disabled {
+      opacity: 0.45;
+      cursor: default;
+    }
+
+    .page-btn:not(:disabled):hover {
+      background: #78909c;
+    }
+
+    /* —— Results —— */
+    .results {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .result-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 18px;
+      display: grid;
+      grid-template-columns: 28px 1fr auto;
+      gap: 12px 16px;
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.15s;
+    }
+
+    .result-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .result-card .check {
+      grid-row: 1 / 3;
+      padding-top: 2px;
+    }
+
+    .result-card .check input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    .result-card .date {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      font-weight: 500;
+    }
+
+    .result-card .title {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .result-card .title:hover {
+      text-decoration: underline;
+      color: var(--accent-hover);
+    }
+
+    .result-card .subtitle {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-top: 4px;
+    }
+
+    .result-card .org {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      margin-top: 4px;
+    }
+
+    .result-card .actions {
+      grid-row: 1 / 3;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
+    }
+
+    .action-btn {
+      background: none;
+      border: none;
+      color: var(--text-soft);
+      cursor: pointer;
+      font-size: 1.15rem;
+      padding: 4px;
+      line-height: 1;
+    }
+
+    .action-btn:hover { color: var(--accent); }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border: 1px solid var(--danger);
+      color: var(--danger);
+      border-radius: 3px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .tag:hover {
+      background: var(--danger);
+      color: #fff;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.8rem;
+      color: var(--danger);
+      margin-top: 6px;
+    }
+
+    /* —— Empty / loading —— */
+    .empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-soft);
+    }
+
+    /* —— Responsive —— */
+    @media (max-width: 700px) {
+      .result-card {
+        grid-template-columns: 28px 1fr;
+      }
+      .result-card .actions {
+        grid-row: auto;
+        grid-column: 2;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+      .tools { margin-left: 0; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de búsqueda superior -->
+  <div class="search-bar">
+    <div class="search-bar-inner">
+      <div class="search-input-wrap">
+        <input type="text" id="searchInput" placeholder="Buscar en CorpusChile" value="lel" aria-label="Buscar">
+        <button class="search-btn" id="searchBtn" aria-label="Buscar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+      </div>
+
+      <div class="tools">
+        <label class="tool-switch">
+          <input type="checkbox" id="darkMode">
+          <span>Modo oscuro</span>
+        </label>
+        <label class="tool-switch">
+          <input type="checkbox" id="highContrast">
+          <span>Alto contraste</span>
+        </label>
+        <a href="../" class="seleccion" title="Mi selección">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 7H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          <span>Selección</span>
+          <span class="badge" id="selectionCount">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Breadcrumb + Volver -->
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="../">Portada</a> &nbsp;/&nbsp;
+      Resultado para: <strong id="queryLabel">lel</strong>
+    </div>
+    <button class="btn-volver" onclick="history.back()">
+      <span>‹</span> VOLVER
+    </button>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <button class="btn-download" title="Descargar resultados" id="btnDownload">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </button>
+
+    <div class="pagination">
+      <span class="d-none-mobile">Aciertos</span>
+      <select id="perPage" aria-label="Resultados por página">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+      </select>
+      <button class="page-btn" disabled title="Primera página">«</button>
+      <button class="page-btn" disabled title="Anterior">‹</button>
+      <span id="pageInfo">1 - 6</span>
+      <button class="page-btn" disabled title="Siguiente">›</button>
+      <button class="page-btn" disabled title="Última página">»</button>
+      <span>de <strong id="totalCount">6</strong></span>
+    </div>
+  </div>
+
+  <!-- Resultados -->
+  <div class="results" id="results"></div>
+
+  <script>
+    // —— Datos de demostración (estilo BCN) ——
+    const DOCS = [
+      {
+        id: 1,
+        date: "29-ENE-1993",
+        type: "Resolucion 216",
+        title: "FIJA LISTA CLASIFICATORIA DE VEHICULOS MOTORIZADOS PARA LOS FINES QUE SEÑALA",
+        org: "MINISTERIO DE HACIENDA",
+        tags: ["MODIFICACION"],
+        status: null
+      },
+      {
+        id: 2,
+        date: "25-MAR-2008",
+        type: "Resolucion 105 EXENTA",
+        title: "DETERMINA MECANISMOS DE CONTROL, VIGILANCIA Y FISCALIZACIÓN SANITARIA DURANTE EL PERÍODO DE SEMANA SANTA",
+        org: "MINISTERIO DE SALUD; SUBSECRETARÍA DE SALUD PÚBLICA; SECRETARÍA REGIONAL MINISTERIAL X REGIÓN DE LOS LAGOS",
+        tags: ["MODIFICACION", "TEXTO REFUNDIDO"],
+        status: "Derogado"
+      },
+      {
+        id: 3,
+        date: "02-FEB-2017",
+        type: "Decreto 119",
+        title: "APRUEBA REGLAMENTO DE SEGURIDAD DE LAS PLANTAS DE BIOGÁS E INTRODUCE MODIFICACIONES AL REGLAMENTO DE INSTALADORES DE GAS",
+        org: "MINISTERIO DE ENERGÍA",
+        tags: ["MODIFICACION", "REGLAMENTO"],
+        status: "Tiene Doble Articulado"
+      },
+      {
+        id: 4,
+        date: "03-JUN-1929",
+        type: "Decreto 2335",
+        title: "Sin Titulo",
+        org: "MINISTERIO DEL INTERIOR",
+        tags: [],
+        status: null
+      },
+      {
+        id: 5,
+        date: "08-MAY-1925",
+        type: "Decreto Ley 354",
+        title: "Sin Titulo",
+        org: "MINISTERIO DEL INTERIOR",
+        tags: [],
+        status: null
+      },
+      {
+        id: 6,
+        date: "24-OCT-2014",
+        type: "Decreto 113",
+        title: "MODIFICA POR RAZONES DE INTERÉS PÚBLICO, LAS CARACTERÍSTICAS DE LAS OBRAS Y SERVICIOS QUE INDICA DEL CONTRATO DE CONCESIÓN DE LA OBRA PÚBLICA FISCAL DENOMINADA \"CONCESIÓN RUTA 5 TRAMO SANTIAGO - LOS VILOS\" Y APRUEBA CONVENIO AD REFERÉNDUM Nº 3",
+        org: "MINISTERIO DE OBRAS PÚBLICAS",
+        tags: ["MODIFICACION"],
+        status: null
+      }
+    ];
+
+    let selected = new Set();
+
+    function render(docs) {
+      const container = document.getElementById("results");
+      if (!docs.length) {
+        container.innerHTML = `<div class="empty">No se encontraron resultados</div>`;
+        return;
+      }
+
+      container.innerHTML = docs.map(doc => `
+        <article class="result-card" data-id="${doc.id}">
+          <div class="check">
+            <input type="checkbox" ${selected.has(doc.id) ? "checked" : ""} data-id="${doc.id}" aria-label="Seleccionar">
+          </div>
+          <div class="content">
+            <div class="date">${doc.date}</div>
+            <a href="../" class="title">${doc.type}</a>
+            <div class="subtitle">${doc.title}</div>
+            <div class="org">${doc.org}</div>
+            ${doc.status ? `<div class="status-badge">⚠ ${doc.status}</div>` : ""}
+            ${doc.tags.length ? `
+              <div class="tags">
+                ${doc.tags.map(t => `<button class="tag">${t}</button>`).join("")}
+              </div>
+            ` : ""}
+          </div>
+          <div class="actions">
+            <button class="action-btn" title="Imprimir" aria-label="Imprimir">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            </button>
+            <button class="action-btn" title="Descargar" aria-label="Descargar">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </button>
+          </div>
+        </article>
+      `).join("");
+
+      // Checkboxes
+      container.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener("change", () => {
+          const id = Number(cb.dataset.id);
+          if (cb.checked) selected.add(id);
+          else selected.delete(id);
+          document.getElementById("selectionCount").textContent = selected.size;
+        });
+      });
+    }
+
+    // Búsqueda simple
+    function doSearch() {
+      const q = document.getElementById("searchInput").value.trim().toLowerCase();
+      document.getElementById("queryLabel").textContent = q || "—";
+
+      // Actualizar la URL sin recargar (?q=...)
+      const url = new URL(window.location);
+      if (q) url.searchParams.set("q", q);
+      else url.searchParams.delete("q");
+      history.replaceState(null, "", url);
+
+      let filtered = DOCS;
+      if (q) {
+        filtered = DOCS.filter(d =>
+          d.type.toLowerCase().includes(q) ||
+          d.title.toLowerCase().includes(q) ||
+          d.org.toLowerCase().includes(q) ||
+          d.date.toLowerCase().includes(q)
+        );
+      }
+
+      document.getElementById("totalCount").textContent = filtered.length;
+      document.getElementById("pageInfo").textContent = filtered.length
+        ? `1 - ${filtered.length}`
+        : "0 - 0";
+
+      render(filtered);
+    }
+
+    document.getElementById("searchBtn").addEventListener("click", doSearch);
+    document.getElementById("searchInput").addEventListener("keydown", e => {
+      if (e.key === "Enter") doSearch();
+    });
+
+    // Tema oscuro
+    const darkCb = document.getElementById("darkMode");
+    const contrastCb = document.getElementById("highContrast");
+
+    darkCb.addEventListener("change", () => {
+      if (darkCb.checked) {
+        contrastCb.checked = false;
+        document.documentElement.setAttribute("data-theme", "dark");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    });
+
+    contrastCb.addEventListener("change", () => {
+      if (contrastCb.checked) {
+        darkCb.checked = false;
+        document.documentElement.setAttribute("data-theme", "high-contrast");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    });
+
+    // Leer query de la URL (?q=...)
+    const params = new URLSearchParams(window.location.search);
+    const initialQ = params.get("q") || "";
+    if (initialQ) {
+      document.getElementById("searchInput").value = initialQ;
+    }
+
+    // Inicio
+    doSearch();
+  </script>
+</body>
+</html>
