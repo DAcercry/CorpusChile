@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Página no encontrada | CorpusChile</title>
+  <link rel="icon" href="logo-mono.png" type="image/png">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0c0b10;
+      --text: #f0ebf8;
+      --text-muted: #b8a9d4;
+      --accent: #8b5cf6;
+      --accent-soft: #a78bfa;
+      --accent-deep: #6d28d9;
+      --btn-text: #faf5ff;
+      --footer: #6b5f82;
+    }
+
+    body.light {
+      --bg: #f7f5fb;
+      --text: #1c1726;
+      --text-muted: #5b4b7a;
+      --accent: #7c3aed;
+      --accent-soft: #6d28d9;
+      --accent-deep: #5b21b6;
+      --btn-text: #faf5ff;
+      --footer: #8b7ba8;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Times New Roman", Times, serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    /* Logo */
+    .logo {
+      position: absolute;
+      bottom: 6%;
+      left: 4.5%;
+      z-index: 10;
+      cursor: pointer;
+      opacity: 0.9;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .logo:hover {
+      opacity: 1;
+      transform: scale(1.04);
+    }
+
+    .logo img {
+      height: 44px;
+      width: auto;
+      display: block;
+      transition: filter 0.4s ease;
+    }
+
+    body.light .logo img {
+      filter: invert(1) brightness(0.22);
+    }
+
+    /* Dato de la base */
+    .dato {
+      position: absolute;
+      top: 9%;
+      right: 5%;
+      max-width: 360px;
+      text-align: right;
+      z-index: 10;
+      opacity: 0;
+      animation: fadeIn 0.8s ease 0.3s forwards;
+    }
+
+    .dato-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+      margin-bottom: 8px;
+      font-weight: 400;
+      transition: color 0.35s ease;
+    }
+
+    .dato-text {
+      font-size: 1.08rem;
+      line-height: 1.55;
+      color: var(--text);
+      font-weight: 400;
+      transition: color 0.35s ease;
+    }
+
+    /* Centro */
+    .center {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 48px 28px;
+      z-index: 1;
+      opacity: 0;
+      animation: fadeIn 0.7s ease 0.1s forwards;
+    }
+
+    .error-code {
+      font-size: clamp(4.8rem, 13vw, 7.2rem);
+      font-weight: 400;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      line-height: 0.95;
+      margin-bottom: 6px;
+      transition: color 0.35s ease;
+    }
+
+    .error-title {
+      font-size: 1.15rem;
+      color: var(--text);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      font-weight: 400;
+      transition: color 0.35s ease;
+    }
+
+    .error-msg {
+      font-size: 1.02rem;
+      color: var(--text-muted);
+      max-width: 400px;
+      line-height: 1.6;
+      margin-bottom: 36px;
+      transition: color 0.35s ease;
+    }
+
+    .btn-home {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--btn-text);
+      padding: 12px 30px;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.07em;
+      text-decoration: none;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    }
+
+    .btn-home:hover {
+      background: var(--accent-deep);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(109, 40, 217, 0.28);
+    }
+
+    .footer-hint {
+      position: absolute;
+      bottom: 2.8%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      color: var(--footer);
+      letter-spacing: 0.05em;
+      transition: color 0.35s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 720px) {
+      .dato {
+        top: 5.5%;
+        right: 5%;
+        left: 5%;
+        max-width: none;
+        text-align: center;
+      }
+      .logo {
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .logo:hover {
+        transform: translateX(-50%) scale(1.04);
+      }
+      .error-code {
+        font-size: 4.4rem;
+      }
+      .footer-hint {
+        bottom: 2%;
+        font-size: 0.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo — clic alterna modo claro / oscuro -->
+  <div class="logo" id="logoToggle" title="Cambiar modo claro / oscuro">
+    <img src="logo-mono.png" alt="CorpusChile" width="44" height="44">
+  </div>
+
+  <!-- Dato de la base -->
+  <div class="dato" id="datoBox" >
+    <div class="dato-label">Dato de la base</div>
+    <div class="dato-text" id="datoText">Cargando…</div>
+  </div>
+
+  <!-- Centro -->
+  <main class="center">
+    <div class="error-code">404</div>
+    <div class="error-title">Página no encontrada</div>
+    <p class="error-msg">
+      El recurso que buscas no existe en este corpus.<br>
+      Mientras tanto, aquí tienes un dato oficial del Estado de Chile.
+    </p>
+    <a class="btn-home" href="https://corpuschile.cl/">Volver al inicio</a>
+  </main>
+
+  <div class="footer-hint">CorpusChile · datos del Estado de Chile</div>
+
+  <script>
+    const datos = [
+      "Chile es un Estado unitario.",
+      "La capital de Chile es Santiago.",
+      "El Estado chileno se organiza en tres poderes principales.",
+      "El Poder Ejecutivo es encabezado por el Presidente de la República.",
+      "El Presidente de Chile ejerce como Jefe de Estado y Jefe de Gobierno.",
+      "El período presidencial dura cuatro años.",
+      "La reelección presidencial inmediata no está permitida.",
+      "El Poder Legislativo está conformado por el Congreso Nacional.",
+      "El Congreso Nacional es bicameral.",
+      "El Senado es una de las cámaras del Congreso.",
+      "La Cámara de Diputadas y Diputados es la otra cámara del Congreso.",
+      "El Poder Judicial es independiente de los demás poderes.",
+      "La Corte Suprema es el máximo tribunal del país.",
+      "Chile posee una Constitución Política.",
+      "La Constitución vigente entró en vigor en 1980.",
+      "El Estado chileno reconoce y protege derechos fundamentales.",
+      "El sufragio en Chile es voluntario.",
+      "La inscripción electoral es automática.",
+      "Chile está dividido en 16 regiones.",
+      "Cada región cuenta con un Gobierno Regional.",
+      "Las regiones están subdivididas en provincias.",
+      "Las provincias son administradas por delegaciones presidenciales.",
+      "Las comunas constituyen la unidad territorial básica.",
+      "Cada comuna posee una municipalidad.",
+      "Los alcaldes son elegidos por votación popular.",
+      "Los concejales también son elegidos democráticamente.",
+      "El Estado chileno recauda impuestos.",
+      "El Servicio de Impuestos Internos administra la fiscalización tributaria.",
+      "La Tesorería General de la República recauda recursos fiscales.",
+      "El Banco Central de Chile es autónomo.",
+      "El Banco Central no forma parte del Gobierno.",
+      "La Contraloría General de la República fiscaliza la legalidad de los actos administrativos.",
+      "La Contraloría es un órgano autónomo.",
+      "El Tribunal Constitucional forma parte de la institucionalidad del Estado.",
+      "Chile cuenta con un Ministerio del Interior y Seguridad Pública.",
+      "Chile tiene un Ministerio de Hacienda.",
+      "Chile posee un Ministerio de Educación.",
+      "Chile cuenta con un Ministerio de Salud.",
+      "Chile posee un Ministerio de Defensa Nacional.",
+      "Los ministerios colaboran con el Presidente de la República.",
+      "El Estado chileno financia establecimientos educacionales públicos.",
+      "El Estado administra hospitales públicos.",
+      "El Fondo Nacional de Salud se conoce como FONASA.",
+      "FONASA es parte del sistema público de salud.",
+      "Carabineros de Chile es una institución policial estatal.",
+      "La Policía de Investigaciones de Chile pertenece al Estado.",
+      "Las Fuerzas Armadas dependen del Estado chileno.",
+      "El Ejército de Chile integra las Fuerzas Armadas.",
+      "La Armada de Chile integra las Fuerzas Armadas.",
+      "La Fuerza Aérea de Chile integra las Fuerzas Armadas.",
+      "El Estado chileno mantiene relaciones diplomáticas con numerosos países.",
+      "El Ministerio de Relaciones Exteriores dirige la política exterior.",
+      "Chile participa en organismos internacionales.",
+      "Chile es miembro de las Naciones Unidas.",
+      "Chile es miembro de la OEA.",
+      "El Estado promueve el desarrollo económico.",
+      "El Presupuesto de la Nación se aprueba anualmente.",
+      "El Presidente presenta el proyecto de Ley de Presupuestos.",
+      "El Congreso revisa la Ley de Presupuestos.",
+      "El Estado regula diversos mercados.",
+      "La Comisión para el Mercado Financiero supervisa entidades financieras.",
+      "Chile posee empresas estatales.",
+      "CODELCO es una empresa estatal chilena.",
+      "ENAP es una empresa estatal.",
+      "BancoEstado pertenece al Estado chileno.",
+      "El Estado administra parques nacionales mediante organismos competentes.",
+      "El Estado protege el patrimonio cultural.",
+      "El Servicio Electoral se conoce como SERVEL.",
+      "SERVEL organiza y supervisa elecciones.",
+      "El voto de los chilenos en el extranjero está permitido.",
+      "El Estado mantiene registros civiles.",
+      "El Registro Civil emite cédulas de identidad.",
+      "El Registro Civil inscribe nacimientos.",
+      "El Registro Civil inscribe matrimonios.",
+      "El Registro Civil inscribe defunciones.",
+      "La nacionalidad chilena puede adquirirse por nacimiento.",
+      "La nacionalidad también puede obtenerse por carta de nacionalización.",
+      "El Estado reconoce la igualdad ante la ley.",
+      "Chile posee tribunales especializados.",
+      "Existen tribunales de familia.",
+      "Existen tribunales laborales.",
+      "Existen tribunales ambientales.",
+      "El Ministerio Público dirige las investigaciones penales.",
+      "El Fiscal Nacional encabeza el Ministerio Público.",
+      "La Defensoría Penal Pública proporciona defensa jurídica.",
+      "El Estado promueve la descentralización administrativa.",
+      "Los gobernadores regionales son elegidos por sufragio.",
+      "El Estado administra bienes nacionales de uso público.",
+      "Las playas son bienes nacionales de uso público.",
+      "Las calles públicas son bienes nacionales de uso público.",
+      "El Estado lleva estadísticas oficiales mediante el INE.",
+      "El INE significa Instituto Nacional de Estadísticas.",
+      "Los censos son coordinados por el INE.",
+      "El Estado implementa políticas sociales.",
+      "El Estado financia programas de vivienda.",
+      "El Estado administra subsidios para distintos grupos sociales.",
+      "Chile se define constitucionalmente como una república democrática.",
+      "La soberanía reside esencialmente en la nación.",
+      "El Estado chileno debe resguardar el orden público.",
+      "El Estado chileno tiene personalidad jurídica de derecho público."
+    ];
+
+    let ultimoIdx = -1;
+
+    function mostrarDato() {
+      let idx;
+      do {
+        idx = Math.floor(Math.random() * datos.length);
+      } while (idx === ultimoIdx && datos.length > 1);
+      ultimoIdx = idx;
+      document.getElementById("datoText").textContent = datos[idx];
+    }
+
+    mostrarDato();
+    // El dato se elige una sola vez al cargar la página
+
+    // Toggle modo claro / oscuro
+    const logo = document.getElementById("logoToggle");
+    logo.addEventListener("click", function () {
+      document.body.classList.toggle("light");
+      const isLight = document.body.classList.contains("light");
+      localStorage.setItem("corpuschile-404-theme", isLight ? "light" : "dark");
+    });
+
+    // Restaurar preferencia
+    if (localStorage.getItem("corpuschile-404-theme") === "light") {
+      document.body.classList.add("light");
+    }
+  </script>
+</body>
+</html>
