@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CorpusChile — Nexo de información pública y memoria documental</title>
+  <meta name="description" content="CorpusChile conecta con fuentes oficiales, organiza información pública y permite consultar documentos procesados mediante OCR.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <form class="search-field" id="searchFieldTop" action="buscar/" method="get" role="search">
+        <span class="search-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </span>
+        <label class="sr-only" for="qTop">Buscar en el corpus documental de Chile</label>
+        <input type="search" id="qTop" name="q" placeholder="Buscar en el corpus documental de Chile…" autocomplete="off">
+        <button type="button" class="search-clear" id="searchClearTop" title="Limpiar" aria-label="Limpiar">×</button>
+      </form>
+    </div>
+
+    <div class="topbar-center">
+      <a class="brand" href="./" aria-label="CorpusChile — inicio">
+        <span class="brand-mark" id="brandMark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <circle cx="12" cy="12" r="4"/>
+          </svg>
+        </span>
+        <span class="brand-name">CorpusChile</span>
+      </a>
+    </div>
+
+    <div class="topbar-actions">
+      <button type="button" class="theme-btn" id="themeBtn" title="Cambiar tema" aria-label="Cambiar tema">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" id="navMobile" aria-label="Menú móvil">
+    <a href="./" aria-current="page">Inicio</a>
+    <a href="explorar/">Explorar</a>
+    <a href="actualidad/">Actualidad</a>
+    <a href="colecciones/">Colecciones</a>
+    <a href="guia-didactica/">Guía Didáctica</a>
+    <a href="buscar/">Buscar</a>
+    <a href="transparencia/">Transparencia</a>
+    <a href="acerca/">Acerca de</a>
+    <a href="cuenta/">Cuenta</a>
+  </nav>
+
+  <div class="shell" id="shell">
+    <aside class="ad-rail" aria-label="Publicidad">
+      <div class="ad-slot">
+        <div class="ad-slot-stack" aria-hidden="true">
+          <span class="ad-slot-bar"></span>
+          <span class="ad-slot-bar"></span>
+          <span class="ad-slot-bar"></span>
+          <span class="ad-slot-bar"></span>
+          <span class="ad-slot-bar"></span>
+          <span class="ad-slot-bar"></span>
+          <span class="ad-slot-bar"></span>
+        </div>
+        <span class="ad-slot-label">Publicidad</span>
+      </div>
+    </aside>
+
+    <main>
+      <div class="clock-badge" id="clockBadge">—</div>
+
+      <p class="hero-descriptor">Nexo de información pública y memoria documental</p>
+      <h1 class="hero-title">Un punto de acceso organizado a fuentes oficiales y documentos históricos</h1>
+
+      <p class="intro">
+        CorpusChile nace de la necesidad de disponer, desde la formación en Administración Pública,
+        de un acceso claro a fuentes oficiales, documentos históricos y recursos institucionales.
+        Conecta con el original, organiza lo público y permite consultar textos procesados mediante OCR.
+      </p>
+
+      <form class="search-home" action="buscar/" method="get" role="search">
+        <label class="sr-only" for="qHome">Buscar en documentos procesados</label>
+        <input type="search" id="qHome" name="q" placeholder="Buscar en documentos procesados…" autocomplete="off">
+        <button type="submit">Buscar</button>
+      </form>
+      <a class="link-advanced" href="buscar/">Ir al buscador completo →</a>
+
+      <div class="results-count" id="resultsCount"></div>
+      <div class="doc-grid" id="docGrid"></div>
+      <div class="fulltext-list" id="fulltextList"></div>
+
+      <!-- Banner de contenido (3 paneles) -->
+      <section class="content-banner" id="contentBanner" aria-label="Contenidos destacados">
+        <div class="content-banner-grid" id="contentBannerGrid">
+          <!-- se rellena por JS -->
+        </div>
+        <button type="button" class="banner-master-btn" id="bannerMasterBtn" title="Administrar enlaces" aria-label="Administrar enlaces del banner">⚙</button>
+      </section>
+
+      <!-- Panel admin (protegido) -->
+      <div class="banner-admin" id="bannerAdmin" hidden>
+        <div class="banner-admin-card">
+          <div class="banner-admin-head">
+            <strong>Enlaces del banner</strong>
+            <button type="button" class="banner-admin-close" id="bannerAdminClose" aria-label="Cerrar">×</button>
+          </div>
+          <div id="bannerAdminAuth">
+            <p class="banner-admin-hint">Introduce la clave para editar los tres enlaces.</p>
+            <input type="password" id="bannerAdminPass" placeholder="Clave" autocomplete="off">
+            <button type="button" class="btn-primary-sm" id="bannerAdminUnlock">Desbloquear</button>
+            <p class="banner-admin-error" id="bannerAdminError" hidden>Clave incorrecta</p>
+          </div>
+          <div id="bannerAdminForm" hidden>
+            <div class="banner-admin-fields" id="bannerAdminFields"></div>
+            <button type="button" class="btn-primary-sm" id="bannerAdminSave">Guardar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colecciones -->
+      <section class="section-block" aria-labelledby="col-title">
+        <h2 id="col-title">Colecciones destacadas</h2>
+        <div class="col-chips">
+          <a class="col-chip" href="colecciones/">1990 <span>· 12 meses</span></a>
+          <a class="col-chip" href="colecciones/">1995 <span>· 12 meses</span></a>
+          <a class="col-chip" href="colecciones/">2000 <span>· 12 meses</span></a>
+          <a class="col-chip" href="colecciones/">2005 <span>· 12 meses</span></a>
+          <a class="col-chip" href="colecciones/">2010 <span>· 12 meses</span></a>
+          <a class="col-chip" href="colecciones/">2020 <span>· 12 meses</span></a>
+        </div>
+      </section>
+
+      <!-- Guía de fuentes (preview) -->
+      <section class="section-block" aria-labelledby="guia-title">
+        <h2 id="guia-title">Fuentes útiles</h2>
+        <div class="guide-list">
+          <a class="guide-item" href="https://www.bcn.cl/" target="_blank" rel="noopener">Actas del Congreso Nacional — Biblioteca del Congreso Nacional</a>
+          <a class="guide-item" href="https://www.diariooficial.interior.gob.cl/" target="_blank" rel="noopener">Diario Oficial — normas publicadas hoy</a>
+          <a class="guide-item" href="https://www.pjud.cl/" target="_blank" rel="noopener">Fallos de la Corte Suprema — Poder Judicial de Chile</a>
+          <a class="guide-item" href="https://www.ine.cl/" target="_blank" rel="noopener">Informes del INE — estadísticas oficiales</a>
+          <a class="guide-item" href="https://www.bcn.cl/leychile/consulta/buscador_tratados" target="_blank" rel="noopener">Convenios internacionales suscritos por Chile — buscador de tratados</a>
+          <a class="guide-item" href="https://www.dipres.gob.cl/" target="_blank" rel="noopener">Presupuesto público — ejecución por ministerio (DIPRES)</a>
+          <a class="guide-item" href="https://www.archivonacional.gob.cl/" target="_blank" rel="noopener">Archivo histórico — Archivo Nacional de Chile</a>
+          <a class="guide-item" href="https://www.bcn.cl/siit" target="_blank" rel="noopener">Mapas y catastros — Sistema Nacional de Información Territorial</a>
+        </div>
+        <a class="guide-more" href="guia-didactica/">Ver más →</a>
+      </section>
+    </main>
+
+    <!-- Panel de detalle -->
+    <aside class="panel" id="panel" aria-label="Detalle del documento">
+      <div class="panel-inner" id="panelInner">
+        <div class="panel-placeholder">Selecciona un documento para ver el detalle, la trazabilidad y el acceso al original.</div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">CorpusChile</div>
+      <p class="footer-copy">Prototipo · Los textos OCR no sustituyen al documento oficial. <a href="transparencia/">Transparencia</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/banner.js"></script>
+</body>
+</html>
