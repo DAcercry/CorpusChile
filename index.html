@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CorpusChile — Nexo de información pública y memoria documental</title>
+  <meta name="description" content="CorpusChile conecta con fuentes oficiales, organiza información pública y permite consultar documentos procesados mediante OCR.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="CorpusChile — inicio">
+      <img class="logo-light" src="assets/color.png" alt="" width="32" height="32" onerror="this.style.display='none'">
+      <img class="logo-dark" src="assets/no-color.png" alt="" width="32" height="32" onerror="this.style.display='none'">
+      <span class="brand-name">CorpusChile</span>
+    </a>
+
+    <nav class="nav-main" aria-label="Principal">
+      <a href="./" aria-current="page">Inicio</a>
+      <a href="explorar/">Explorar</a>
+      <a href="actualidad/">Actualidad</a>
+      <a href="colecciones/">Colecciones</a>
+      <a href="buscar/">Buscar</a>
+      <a href="transparencia/">Transparencia</a>
+      <a href="acerca/">Acerca de</a>
+    </nav>
+
+    <div class="topbar-actions">
+      <form class="search-field" id="searchFieldTop" action="buscar/" method="get" role="search">
+        <label class="sr-only" for="qTop">Buscar</label>
+        <input type="search" id="qTop" name="q" placeholder="Buscar…" autocomplete="off">
+        <button type="button" class="search-clear" id="searchClearTop" title="Limpiar" aria-label="Limpiar">×</button>
+      </form>
+      <a href="cuenta/" style="font-size:0.85rem;font-weight:500;color:var(--ink-soft);text-decoration:none;padding:6px 8px;">Cuenta</a>
+      <button type="button" class="theme-btn" id="themeBtn" title="Cambiar tema" aria-label="Cambiar tema">🌙</button>
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" id="navMobile" aria-label="Menú móvil">
+    <a href="./" aria-current="page">Inicio</a>
+    <a href="explorar/">Explorar</a>
+    <a href="actualidad/">Actualidad</a>
+    <a href="colecciones/">Colecciones</a>
+    <a href="buscar/">Buscar</a>
+    <a href="transparencia/">Transparencia</a>
+    <a href="acerca/">Acerca de</a>
+    <a href="cuenta/">Cuenta</a>
+  </nav>
+
+  <div class="shell" id="shell">
+    <aside class="ad-rail" aria-label="Publicidad">
+      <div class="ad-slot">PUBLICIDAD</div>
+    </aside>
+
+    <main>
+      <div class="clock-badge" id="clockBadge">—</div>
+
+      <p class="hero-descriptor">Nexo de información pública y memoria documental</p>
+      <h1 class="hero-title">Un punto de acceso organizado a fuentes oficiales y documentos históricos</h1>
+
+      <p class="intro">
+        CorpusChile nace de la necesidad de disponer, desde la formación en Administración Pública,
+        de un acceso claro a fuentes oficiales, documentos históricos y recursos institucionales.
+        Conecta con el original, organiza lo público y permite consultar textos procesados mediante OCR.
+      </p>
+
+      <form class="search-home" action="buscar/" method="get" role="search">
+        <label class="sr-only" for="qHome">Buscar en documentos procesados</label>
+        <input type="search" id="qHome" name="q" placeholder="Buscar en documentos procesados…" autocomplete="off">
+        <button type="submit">Buscar</button>
+      </form>
+      <a class="link-advanced" href="buscar/">Ir al buscador completo →</a>
+
+      <div class="results-count" id="resultsCount"></div>
+      <div class="doc-grid" id="docGrid"></div>
+      <div class="fulltext-list" id="fulltextList"></div>
+
+      <!-- Actualidad (3) -->
+      <section class="section-block" aria-labelledby="act-title">
+        <h2 id="act-title">Actualidad</h2>
+        <div class="cards-row">
+          <article class="card-mini">
+            <span class="tag tag-editorial">Contenido editorial</span>
+            <h3><a href="actualidad/">Cómo leer una edición del Diario Oficial</a></h3>
+            <p class="meta">12 mar 2026 · Administración pública</p>
+            <p>Guía para identificar tipos de actos, fechas de vigencia y la diferencia entre texto publicado y consolidado.</p>
+          </article>
+          <article class="card-mini">
+            <span class="tag tag-external">Fuente externa</span>
+            <h3><a href="https://www.bcn.cl/leychile" rel="noopener" target="_blank">Actualización de normas en Ley Chile</a></h3>
+            <p class="meta">10 mar 2026 · Legislación</p>
+            <p>La BCN mantiene actualizado el repositorio de normas vigentes y derogadas.</p>
+          </article>
+          <article class="card-mini">
+            <span class="tag tag-editorial">Contenido editorial</span>
+            <h3><a href="transparencia/">Trazabilidad: original, OCR y metadatos</a></h3>
+            <p class="meta">5 mar 2026 · Transparencia</p>
+            <p>Cada resultado distingue el documento oficial, el texto extraído y los metadatos de CorpusChile.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Colecciones -->
+      <section class="section-block" aria-labelledby="col-title">
+        <h2 id="col-title">Colecciones destacadas</h2>
+        <div class="col-chips">
+          <a class="col-chip" href="colecciones/">1990 <span>· 12 meses</span></a>
+          <a class="col-chip" href="colecciones/">1995 <span>· 12 meses</span></a>
+          <a class="col-chip" href="colecciones/">2000 <span>· 12 meses</span></a>
+          <a class="col-chip" href="colecciones/">2005 <span>· 12 meses</span></a>
+          <a class="col-chip" href="colecciones/">2010 <span>· 12 meses</span></a>
+          <a class="col-chip" href="colecciones/">2020 <span>· 12 meses</span></a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Panel de detalle -->
+    <aside class="panel" id="panel" aria-label="Detalle del documento">
+      <div class="panel-inner" id="panelInner">
+        <div class="panel-placeholder">Selecciona un documento para ver el detalle, la trazabilidad y el acceso al original.</div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">CorpusChile</div>
+      <p class="footer-copy">Prototipo · Los textos OCR no sustituyen al documento oficial. <a href="transparencia/">Transparencia</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
