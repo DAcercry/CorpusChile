@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía Didáctica — CorpusChile</title>
+  <meta name="description" content="Guía didáctica de fuentes oficiales y recursos documentales de Chile.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <form class="search-field" id="searchFieldTop" action="../buscar/" method="get" role="search">
+        <span class="search-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </span>
+        <label class="sr-only" for="qTop">Buscar</label>
+        <input type="search" id="qTop" name="q" placeholder="Buscar en el corpus documental de Chile…" autocomplete="off">
+        <button type="button" class="search-clear" id="searchClearTop" title="Limpiar" aria-label="Limpiar">×</button>
+      </form>
+    </div>
+    <div class="topbar-center">
+      <a class="brand" href="../" aria-label="CorpusChile — inicio">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/>
+          </svg>
+        </span>
+        <span class="brand-name">CorpusChile</span>
+      </a>
+    </div>
+    <div class="topbar-actions">
+      <button type="button" class="theme-btn" id="themeBtn" title="Cambiar tema" aria-label="Cambiar tema">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" id="navMobile" aria-label="Menú móvil">
+    <a href="../">Inicio</a>
+    <a href="../explorar/">Explorar</a>
+    <a href="../actualidad/">Actualidad</a>
+    <a href="../colecciones/">Colecciones</a>
+    <a href="../guia-didactica/" aria-current="page">Guía Didáctica</a>
+    <a href="../buscar/">Buscar</a>
+    <a href="../transparencia/">Transparencia</a>
+    <a href="../acerca/">Acerca de</a>
+    <a href="../cuenta/">Cuenta</a>
+  </nav>
+
+  <main style="max-width:800px;margin:0 auto;padding:36px 24px 60px;">
+    <p class="hero-descriptor">CorpusChile</p>
+    <h1 class="hero-title">Guía Didáctica</h1>
+    <p class="intro">
+      Orientación sobre fuentes oficiales y recursos institucionales de Chile.
+      Cada enlace lleva al sitio de origen. Úsala para saber <em>dónde</em> buscar
+      según el tipo de información que necesitas.
+    </p>
+
+    <h2 class="section-block" style="border:none;padding:0;margin:28px 0 12px;font-family:var(--serif);font-size:1.15rem;">Legislación y normas</h2>
+    <div class="guide-list">
+      <a class="guide-item" href="https://www.diariooficial.interior.gob.cl/" target="_blank" rel="noopener">Diario Oficial — normas publicadas hoy</a>
+      <a class="guide-item" href="https://www.bcn.cl/leychile" target="_blank" rel="noopener">Ley Chile — normas vigentes y derogadas (BCN)</a>
+      <a class="guide-item" href="https://www.bcn.cl/" target="_blank" rel="noopener">Actas del Congreso Nacional — Biblioteca del Congreso Nacional</a>
+      <a class="guide-item" href="https://www.bcn.cl/leychile/consulta/buscador_tratados" target="_blank" rel="noopener">Convenios internacionales suscritos por Chile — buscador de tratados</a>
+      <a class="guide-item" href="https://www.bcn.cl/historiadelaley" target="_blank" rel="noopener">Historia de la Ley — tramitación legislativa</a>
+    </div>
+
+    <h2 style="font-family:var(--serif);font-size:1.15rem;margin:32px 0 12px;">Justicia y control</h2>
+    <div class="guide-list">
+      <a class="guide-item" href="https://www.pjud.cl/" target="_blank" rel="noopener">Fallos de la Corte Suprema — Poder Judicial de Chile</a>
+      <a class="guide-item" href="https://www.contraloria.cl/" target="_blank" rel="noopener">Dictámenes y fiscalización — Contraloría General de la República</a>
+      <a class="guide-item" href="https://www.tribunalconstitucional.cl/" target="_blank" rel="noopener">Sentencias y roles — Tribunal Constitucional</a>
+    </div>
+
+    <h2 style="font-family:var(--serif);font-size:1.15rem;margin:32px 0 12px;">Datos, presupuesto y territorio</h2>
+    <div class="guide-list">
+      <a class="guide-item" href="https://www.ine.cl/" target="_blank" rel="noopener">Informes del INE — estadísticas oficiales</a>
+      <a class="guide-item" href="https://www.dipres.gob.cl/" target="_blank" rel="noopener">Presupuesto público — ejecución por ministerio (DIPRES)</a>
+      <a class="guide-item" href="https://www.bcn.cl/siit" target="_blank" rel="noopener">Mapas y catastros — Sistema Nacional de Información Territorial</a>
+      <a class="guide-item" href="https://datos.gob.cl/" target="_blank" rel="noopener">Datos abiertos — Portal de Datos del Estado</a>
+    </div>
+
+    <h2 style="font-family:var(--serif);font-size:1.15rem;margin:32px 0 12px;">Memoria e historia</h2>
+    <div class="guide-list">
+      <a class="guide-item" href="https://www.archivonacional.gob.cl/" target="_blank" rel="noopener">Archivo histórico — Archivo Nacional de Chile</a>
+      <a class="guide-item" href="https://www.memoriachilena.gob.cl/" target="_blank" rel="noopener">Memoria Chilena — Biblioteca Nacional Digital</a>
+      <a class="guide-item" href="https://www.bcn.cl/historiapolitica" target="_blank" rel="noopener">Historia Política — BCN</a>
+    </div>
+
+    <p class="intro" style="margin-top:36px;font-size:0.9rem;">
+      Esta guía no sustituye a las fuentes oficiales. CorpusChile orienta el acceso;
+      la verificación siempre debe hacerse en el documento original.
+      <a href="../transparencia/">Ver Transparencia</a>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">CorpusChile</div>
+      <p class="footer-copy">Prototipo · Los textos OCR no sustituyen al documento oficial.</p>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
