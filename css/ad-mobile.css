@@ -1,0 +1,98 @@
+/* —— Publicidad móvil: horizontal + sticky arriba —— */
+
+/* Oculta el rail vertical en móvil; muestra el horizontal */
+.ad-rail-mobile {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  /* El rail vertical del shell se oculta (ya estaba en main.css) */
+  .ad-rail {
+    display: none !important;
+  }
+
+  /* Banner horizontal sticky bajo el topbar */
+  .ad-rail-mobile {
+    display: block;
+    position: sticky;
+    top: 0; /* se pega debajo del topbar sticky */
+    z-index: 40;
+    background: var(--paper-raised);
+    border-bottom: 1px solid var(--grey-line);
+    padding: 8px 12px;
+  }
+
+  /* Ajuste: el topbar ya es sticky z-index 50; este va debajo */
+  .topbar {
+    /* asegura que el ad quede justo debajo */
+  }
+
+  .ad-slot-mobile {
+    max-width: 728px;
+    height: 60px;
+    margin: 0 auto;
+    border: 1px solid var(--grey-line);
+    background: var(--paper);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 14px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .ad-slot-stack-h {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    height: 28px;
+  }
+
+  .ad-slot-stack-h .ad-slot-bar {
+    display: block;
+    width: 7px;
+    height: 100%;
+    border-radius: 2px;
+  }
+
+  .ad-slot-stack-h .ad-slot-bar:nth-child(1) { height: 100%; background: #5B8DEF; }
+  .ad-slot-stack-h .ad-slot-bar:nth-child(2) { height: 88%;  background: #E85D5D; }
+  .ad-slot-stack-h .ad-slot-bar:nth-child(3) { height: 100%; background: #3D3D4A; }
+  .ad-slot-stack-h .ad-slot-bar:nth-child(4) { height: 92%;  background: #5B8DEF; }
+  .ad-slot-stack-h .ad-slot-bar:nth-child(5) { height: 78%;  background: #E8C547; }
+  .ad-slot-stack-h .ad-slot-bar:nth-child(6) { height: 100%; background: #3D3D4A; }
+  .ad-slot-stack-h .ad-slot-bar:nth-child(7) { height: 85%;  background: #5B8DEF; }
+
+  .ad-slot-mobile .ad-slot-label {
+    margin-top: 0;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--grey);
+    white-space: nowrap;
+  }
+}
+
+/* Desktop: el horizontal no se muestra */
+@media (min-width: 981px) {
+  .ad-rail-mobile {
+    display: none !important;
+  }
+}
+
+/* Logo desde imagen */
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.brand-mark {
+  background: transparent; /* la imagen ya trae el fondo negro */
+  overflow: hidden;
+}
