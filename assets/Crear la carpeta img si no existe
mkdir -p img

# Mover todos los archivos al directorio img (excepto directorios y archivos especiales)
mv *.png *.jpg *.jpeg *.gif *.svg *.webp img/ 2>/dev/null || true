@@ -1,0 +1,5 @@
+Crear la carpeta img si no existe
+mkdir -p img
+
+Mover todos los archivos al directorio img (excepto directorios y archivos especiales)
+mv *.png *.jpg *.jpeg *.gif *.svg *.webp img/ 2>/dev/null || true
