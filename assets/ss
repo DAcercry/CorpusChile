@@ -1,0 +1,11 @@
+# Solo PNG
+mv *.png img/
+
+# Solo JPG
+mv *.jpg *.jpeg img/
+
+# Solo SVG
+mv *.svg img/
+
+# Todos los anteriores
+mv *.{png,jpg,jpeg,svg,gif,webp} img/ 2>/dev/null || true
