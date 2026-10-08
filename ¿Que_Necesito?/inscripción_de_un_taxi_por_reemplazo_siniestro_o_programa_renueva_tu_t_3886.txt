@@ -1,0 +1,195 @@
+TITULO: Inscripción de un taxi por reemplazo, siniestro o programa "Renueva tu taxi" en el Registro Nacional de Servicios de Transporte de Pasajeros (RNSTP)
+URL: https://www.chileatiende.gob.cl/fichas/3886-inscripcion-de-un-taxi-por-reemplazo-siniestro-o-programa-renueva-tu-taxi-en-el-registro-nacional-de-servicios-de-transporte-de-pasajeros-rnstp
+CATEGORIA: transporte
+FECHA_DESCARGA: 2026-10-08 11:12:45
+ORGANISMO: Instituciones que publican en ChileAtiende
+============================================================
+
+# Descripción
+Permite a los operadores inscribir un taxi por reemplazo, siniestro o programa "Renueva tu taxi" en el Registro Nacional de Servicios de Transporte de Pasajeros (RNSTP), a cargo de la Subsecretaría de Transportes.
+El trámite está disponible durante todo el año en el
+sitio web de Subtrans
+, además de la
+oficina y correo electrónico de la Secretaría Regional Ministerial (SEREMI) de Transportes y Telecomunicaciones
+en la que se encuentra inscrito el servicio.
+¿A quién va dirigido?
+Operadores de servicios interesados en la inscripción de un taxi por reemplazo, siniestro o programa “Renueva tu taxi” en el Registro Nacional de Servicios de Transporte de Pasajeros (RNSTP).
+¿Qué necesito para hacer el trámite?
+Antecedentes de la persona interesada
+:
+Si realiza el trámite en línea, la persona natural o jurídica (por medio de su representante legal) debe tener
+ClaveÚnica
+.
+Formulario Nº 1
+, firmado por el o la responsable del servicio registrado. Es necesario individualizar el vehículo e informar que se trata de la primera inscripción.
+Formulario Nº 3
+, firmado por el o la responsable del servicio, y el propietario o propietaria del o los vehículos, como constancia de un título que habilita al interesado o interesada a destinarlo al servicio. Si se trata de más de un vehículo, los propietarios o propietarias deben individualizarlos y firmar la constancia.
+Si es una persona natural
+:
+Cédula de identidad vigente y fotocopia por ambos lados.
+Si actúa a través de un mandatario o mandataria: escritura pública del mandato o del poder notarial (incluyendo la copia autorizada), y cédula de identidad del mandatario o mandataria.
+Si es una persona jurídica del tipo “Sociedad de Responsabilidad Limitada” o “Empresa Individual de Responsabilidad Limitada (EIRL)”
+:
+Escritura pública de constitución y/o copia autorizada.
+Inscripción en el Registro de Comercio y/o copia autorizada.
+Extracto de la publicación en el Diario Oficial.
+Certificado de vigencia de la sociedad.
+Certificado de vigencia de los y/o las representantes legales.
+Cédula de identidad de los y/o las representantes.
+Si actúa a través de un mandatario o mandataria: escritura pública del mandato y/o copia autorizada, inscripción del mandato en el Registro de Comercio y copia autorizada, poder notarial y cédula de identidad del mandatario o mandataria.
+Si es una persona jurídica del tipo Sociedad Anónima
+:
+Escritura pública de constitución de la sociedad y/o copia autorizada.
+Certificado de vigencia de la sociedad.
+Certificado de vigencia de los y/o las representantes legales.
+Cédula de identidad de los y/o las representantes legales.
+Si actúa a través de un mandatario o mandataria: escritura pública del mandato y/o copia autorizada, poder notarial y cédula de identidad del mandatario o mandataria.
+Si es una persona jurídica acogida a la
+Ley Nº 20.659
+, que simplifica el régimen de constitución, modificación y disolución de las sociedades comerciales
+:
+Certificado de vigencia.
+Certificado de estatuto actualizado.
+Certificado de anotaciones de la correspondiente persona jurídica, otorgado según el
+artículo 29 del Decreto Supremo (DS) Nº 45, de 2013, del Ministerio de Economía, Fomento y Turismo
+.
+Declaración jurada suscrita por quien solicita la inscripción, indicando que está al tanto de la obligación de constituir garantías para prestar el servicio, y que cuenta con el patrimonio (cuando sea exigible).
+Importante
+: los documentos no deben haber sido emitidos con más de un mes de anterioridad a su presentación.
+Antecedentes de los vehículos
+:
+Formulario Único de Reemplazo
+(FUR).
+Certificado de inscripción
+y
+Certificado de Anotaciones Vigentes (CAV)
+de vehículos motorizados en el Registro Nacional de Vehículos Motorizados del Servicio de Registro Civil e Identificación (SRCeI). El CAV no será necesario si la Secretaría Regional Ministerial (SEREMI) de Transportes y Telecomunicaciones mantiene contacto en línea con el Registro de Vehículos Motorizados del Registro Civil.
+Si se encuentra en proceso de acreditación de propiedad en el Registro Civil, puede acompañar la factura de compraventa más la solicitud de primera inscripción o transferencia, según corresponda, en el Registro Nacional de Vehículos Motorizados del Registro Civil.
+Si corresponde a un vehículo en leasing, debe entregar el documento que lo acredite y del propietario o propietaria que autoriza al vehículo para prestar el servicio.
+Si corresponde a un vehículo de una comunidad, debe acompañar la escritura pública del mandato de la comunidad y/o el poder notarial de su representante.
+Fotocopia de certificado de revisión técnica. No será necesario si la Secretaría Regional Ministerial (SEREMI) de Transportes y Telecomunicaciones respectiva está en línea con el sistema de gestión de Plantas de Revisiones Técnicas (PRT). Si el vehículo es homologado, debe presentar la fotocopia del certificado de homologación de la municipalidad que corresponda y el certificado de características, otorgado por una Planta de Revisión Técnica (PRT).
+Si los taxis ingresan:
+Por reemplazo normal
+: formulario único de reemplazo y permiso de circulación otorgado por el municipio donde se gestionó el permiso del vehículo saliente.
+Por reemplazo de vehículos ingresados por la Ley Nº 20.867
+: copia de la resolución del Ministerio de Tranportes y Telecomunicaciones (MTT) en la cual se indican las Placas Patentes Únicas (PPU) de los vehículos que acceden por concurso a nuevos cupos del parque de taxis (
+Ley Nº 20.867
+).
+Por el programa “Renueva tu taxi”
+: resolución del MTT en la cual se indica las PPU de vehículos que son beneficiarios de la
+Ley Nº 20.378
+, formulario único de reemplazo, y permiso de circulación otorgado por la municipalidad donde se gestionó el permiso del vehículo saliente.
+Vigencia, marca, modelo y número de serie del taxímetro con el control otorgado por la municipalidad cuando se trate de taxis básicos y ejecutivos que operen en ciudades en que el taxímetro es obligatorio (
+Resolución Exenta Nº 538, de 1986
+).
+Documentos que acrediten que el vehículo entrante nunca ha sido taxi, por ejemplo, certificado municipal.
+Documentos que certifiquen que el vehículo entrante tiene una antigüedad no superior a la establecida por norma (tres, cinco y siete años de antigüedad, dependiendo de la región).
+Documentos que acrediten que la propietaria o propietario del vehículo entrante es el mismo que el del vehículo saliente.
+Documentos que certifiquen que el trámite de incorporación del vehículo entrante se está realizando dentro del plazo de 18 meses, a contar de la fecha de cancelación del vehículo saliente o de la solicitud de cancelación del taxi inscrito que se reemplaza.
+Devolver el certificado de inscripción del registro correspondiente al vehículo saliente en las condiciones en que se encuentre. En caso contrario, debe presentar la declaración jurada establecida por el
+Decreto Supremo (DS) Nº 212, de 1992, del MTT
+.
+Importante
+: las solicitudes de incorporación del vehículo entrante y de cancelación del vehículo saliente, deben ser presentadas simultáneamente si la cancelación no se realizó anticipadamente.
+Antecedentes de los conductores y conductoras
+:
+Nómina de los choferes de cada vehículo, indicando los nombres de los conductores, RUT, tipo de licencia habilitante al servicio, fecha en que se otorgó y vence la licencia, municipalidad que la otorgó, y datos de contacto.
+Importante
+: estos antecedentes son obligatorios para los conductores y conductoras de taxis que ingresan vía concursos (
+Ley Nº 20.867
+).
+¿Qué vigencia tiene?
+Por el período que se indica en cada certificado, el que está determinado por la normativa vigente o por resoluciones regionales, según corresponda.
+¿Cómo y dónde hago el trámite?
+devices
+En línea
+store
+En oficina
+mail
+Correo
+- Instrucciones Trámite en línea
+Reúna los antecedentes requeridos.
+Haga clic en “Solicitar inscripción”.
+Una vez en el sitio web de la Subsecretaría de Transportes, ingrese su RUN y escriba su ClaveÚnica, y haga clic en “Continuar”. Si no la tiene,
+solicítela
+.
+Seleccione “Empresa” o “Persona natural”, y haga clic en “Siguiente”.
+Complete la información, adjunte los antecedentes solicitados, y haga clic en “Siguiente”.
+Valide los datos y documentos ingresados.
+Pague el costo del trámite, y haga clic en “Enviar”.
+Como resultado del trámite, habrá solicitado la inscripción. Tendrá respuesta a su requerimiento en un plazo máximo de 20 días hábiles. De ser aprobada, obtendrá la resolución que autoriza el servicio y los certificados de inscripción en el registro, que permite a cada vehículo realizar el servicio de transporte público registrado.
+- Instrucciones Trámite en Sucursal
+Reúna los antecedentes requeridos.
+Diríjase a la
+oficina de la Secretaría Regional Ministerial (SEREMI) de Transporte y Telecomunicaciones
+de la región donde se encuentra inscrito el servicio.
+Explique el motivo de su visita: solicitar la inscripción de un taxi por reemplazo, siniestro o programa “Renueva tu taxi” en el Registro Nacional de Servicios de Transporte de Pasajeros (RNSTP).
+Entregue los antecedentes requeridos.
+Pague el valor que corresponde.
+Como resultado del trámite, habrá solicitado la inscripción. Tendrá respuesta a su requerimiento en un plazo máximo de 20 días hábiles. De ser aprobada, obtendrá la resolución que autoriza el servicio y los certificados de inscripción en el registro, que permite a cada vehículo realizar el servicio de transporte público registrado.
+- Instrucciones trámite por Email
+Reúna los antecedentes requeridos.
+Envíelos al
+correo electrónico disponible según la región donde se encuentra inscrito el servicio
+.
+Como resultado del trámite, habrá solicitado la inscripción. Tendrá respuesta a su requerimiento en un plazo máximo de 20 días hábiles. De ser aprobada, obtendrá la resolución que autoriza el servicio y los certificados de inscripción en el registro, que permite a cada vehículo realizar el servicio de transporte público registrado.
+- Instrucciones trámite en el Consulado
+¿Cuál es el costo del trámite?
+$400 por certificado de cancelación del vehículo saliente.
+$790 por certificado de registro en el recorrido troncal o principal.
+$530 por certificado de registro correspondiente a cada variante existente en el servicio.
+Marco Legal
+Decreto Supremo (DS) Nº 212, de 1992
+.
+Ley Nº 20.378
+.
+Ley Nº 20.867
+.
+Información proporcionada por
+Subsecretaría de Transportes
+Descarga una versión PDF de esta página
+
+# ¿A quién va dirigido?
+
+# ¿Qué necesito para hacer el trámite?
+
+# ¿Qué vigencia tiene?
+
+# ¿Cómo y dónde hago el trámite?
+
+# ¿Cuál es el costo del trámite?
+
+# Marco Legal
+
+# Llámanos al 101
+Lunes a jueves, de 8:00 a 20:00 hrs.
+Viernes, de 8:00 a 18:00 hrs.
+
+# error_outline
+
+# ¿Qué alternativa prefieres para recordarte sobre Inscripción de un taxi por reemplazo, siniestro o programa "Renueva tu taxi" en el Registro Nacional de Servicios de Transporte de Pasajeros (RNSTP) ?
+
+# Certificado de inscripción de vehículos motorizados (padrón)
+El certificado de inscripción de vehículos motorizados, también conocido como padrón, contiene:
+Los...
+
+# Cancelación por cambio de modalidad de un taxi inscrito en un servicio en el Registro Nacional de Servicios de Transporte de Pasajeros (RNSTP)
+Trámite en línea
+Este trámite permite a los operadores solicitar la cancelación por cambio de modalidad de un taxi in...
+
+# Programa de renovación de taxis colectivos (Renueva tu Colectivo)
+Trámite en línea
+Permite acceder a financiamiento para la renovación de taxis colectivos que presten servicio de tran...
+
+
+# Enlaces relacionados
+- Bono $30 mil por hijo → https://www.chileatiende.gob.cl/fichas/144481-bono-30-mil-por-hijo
+- Gratuidad 2027 → https://www.chileatiende.gob.cl/fichas/43203-gratuidad-en-la-educacion-superior
+- ClaveÚnica → https://www.chileatiende.gob.cl/fichas/11331
+- Certificado de inscripción → https://www.chileatiende.gob.cl/fichas/3412
+- Certificado de Anotaciones Vigentes (CAV) → https://www.chileatiende.gob.cl/fichas/3370
+- Descarga una versión PDF de esta página → https://www.chileatiende.gob.cl/fichas/3886/1/pdf
+- Descargar recordatorio → https://www.chileatiende.gob.cl/fichas/118063/recordatorios
+- Certificado de inscripción de vehículos motorizados (padrón) → https://www.chileatiende.gob.cl/fichas/3412-certificado-de-inscripcion-de-vehiculos-motorizados-padron
+- Cancelación por cambio de modalidad de un taxi inscrito en un servicio en el Registro Nacional de Servicios de Transporte de Pasajeros (RNSTP) → https://www.chileatiende.gob.cl/fichas/3919-cancelacion-por-cambio-de-modalidad-de-un-taxi-inscrito-en-un-servicio-en-el-registro-nacional-de-servicios-de-transporte-de-pasajeros-rnstp
+- Programa de renovación de taxis colectivos (Renueva tu Colectivo) → https://www.chileatiende.gob.cl/fichas/43671-programa-de-renovacion-de-taxis-colectivos-renueva-tu-colectivo

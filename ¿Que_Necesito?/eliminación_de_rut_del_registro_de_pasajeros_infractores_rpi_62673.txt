@@ -1,0 +1,101 @@
+TITULO: Eliminación de RUT del Registro de Pasajeros Infractores (RPI)
+URL: https://www.chileatiende.gob.cl/fichas/62673-eliminacion-de-rut-del-registro-de-pasajeros-infractores-rpi
+CATEGORIA: transporte
+FECHA_DESCARGA: 2026-10-08 11:14:03
+ORGANISMO: Instituciones que publican en ChileAtiende
+============================================================
+
+# Descripción
+Permite
+desbloquear de manera temporal
+a las personas que se
+encuentran en el Registro de Pasajeros Infractores (RPI)
+y que presenten la boleta de pago emitida por la Tesorería Municipal correspondiente, con la finalidad de que estas puedan obtener documentos, tales como licencia de conducir, permiso de circulación, pase escolar, entre otros.
+Estas solicitudes serán validadas por la División de Normas y Operaciones de la Subsecretaría de Transportes,
+para eliminar de manera definitiva
+al infractor o infractora del RPI.
+La solicitud de eliminación se puede realizar durante todo el año en el
+sitio web del RPI
+.
+¿A quién va dirigido?
+Persona natural que haya pagado la multa de una infracción y que requiera ser eliminada del Registro de Pasajeros Infractores (RPI).
+Detalles
+El Registro de Pasajeros Infractores (RPI) es administrado por la Subsecretaría de Transportes (Subtrans) y tiene anotada a aquellas personas que no han pagado la multa correspondiente, por incurrir en las siguientes faltas:
+Acceder a los servicios de transporte público remunerado de pasajeros utilizando un pase escolar, pase de educación superior o cualquier instrumento o mecanismo que permita el uso del transporte público con beneficios, sin ser su titular, o alterándolo con el fin de aparentar la titularidad.
+Usar los servicios de transporte público remunerado de pasajeros sin pagar la tarifa correspondiente.
+Importante
+:
+A las personas que están anotadas en el RPI
+se les suspenderá la entrega de los documentos o certificados asociados al transporte,
+tales como
+licencia de conducir
+,
+permisos de circulación
+(cuando el infractor o infractora sea propietario o propietaria de un vehículo motorizado),
+pases escolares o de educación superior, o cualquier documento que permita una exención de pago o rebaja tarifaria en el transporte público
+. Además, la Tesorería General de la República podrá retener de la devolución de impuestos a la renta que corresponda.
+¿Qué necesito para hacer el trámite?
+Cédula de identidad vigente.
+Tener
+ClaveÚnica
+.
+Boleta de pago de multa emitida por la tesorería municipal correspondiente, en formato PDF o JPG y que no supere los 10 MB.
+¿Cómo y dónde hago el trámite?
+devices
+En línea
+- Instrucciones Trámite en línea
+Reúna los antecedentes requeridos.
+Haga clic en "solicitar eliminación".
+Una vez en el sitio web de RPI, haga clic en "ClaveÚnica".
+Escriba su RUN y ClaveÚnica, y haga clic en "continuar". Si no la tiene,
+solicítela
+.
+Identifique y seleccione de la lista la o las multas que desea informar como pagada.
+Presione el botón "subir boleta", y acepte las condiciones señaladas en el cuadro de diálogo.
+Haga clic en "ingrese documento", adjunte la boleta de pago, y seleccione "subir boleta".
+Como resultado del trámite, habrá solicitado ser eliminado del Registro de Pasajeros Infractores (RPI). La División de Normas y Operaciones tiene un plazo de cinco días hábiles para validar la información y bloquear o rechazar la solicitud.
+- Instrucciones Trámite en Sucursal
+- Instrucciones trámite por Email
+- Instrucciones trámite en el Consulado
+¿Cuál es el costo del trámite?
+No tiene costo.
+Marco Legal
+Ley Nº 21.083
+, que adopta medidas de seguridad y control en medios de pago del transporte público de pasajeros.
+Decreto Nº 68
+, de 2018, que aprueba reglamento de operación, administración y condiciones técnicas de acceso del registro de pasajeros infractores del transporte público.
+Decreto con fuerza de ley Nº 1, de 2007
+.
+Información proporcionada por
+Subsecretaría de Transportes
+Descarga una versión PDF de esta página
+
+# ¿A quién va dirigido?
+
+# Detalles
+
+# ¿Qué necesito para hacer el trámite?
+
+# ¿Cómo y dónde hago el trámite?
+
+# ¿Cuál es el costo del trámite?
+
+# Marco Legal
+
+# Llámanos al 101
+Lunes a jueves, de 8:00 a 20:00 hrs.
+Viernes, de 8:00 a 18:00 hrs.
+
+# error_outline
+
+# ¿Qué alternativa prefieres para recordarte sobre Eliminación de RUT del Registro de Pasajeros Infractores (RPI) ?
+
+
+# Enlaces relacionados
+- Bono $30 mil por hijo → https://www.chileatiende.gob.cl/fichas/144481-bono-30-mil-por-hijo
+- Gratuidad 2027 → https://www.chileatiende.gob.cl/fichas/43203-gratuidad-en-la-educacion-superior
+- encuentran en el Registro de Pasajeros Infractores (RPI) → https://www.chileatiende.gob.cl/fichas/62468-consultar-en-el-registro-de-pasajeros-infractores-rpi
+- permisos de circulación → https://www.chileatiende.gob.cl/fichas/9611-permiso-de-circulacion
+- ClaveÚnica → https://www.chileatiende.gob.cl/fichas/11331-clave-unica
+- Descarga una versión PDF de esta página → https://www.chileatiende.gob.cl/fichas/62673/1/pdf
+- Descargar recordatorio → https://www.chileatiende.gob.cl/fichas/106767/recordatorios
