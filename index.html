@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
   <header class="topbar">
     <div class="topbar-left">
       <form class="search-field" id="searchFieldTop" action="buscar/" method="get" role="search">
@@ -23,7 +22,6 @@
         <button type="button" class="search-clear" id="searchClearTop" title="Limpiar" aria-label="Limpiar">×</button>
       </form>
     </div>
-
     <div class="topbar-center">
       <a class="brand" href="./" aria-label="CorpusChile — inicio">
         <span class="brand-mark" id="brandMark">
@@ -32,7 +30,6 @@
         <span class="brand-name">CorpusChile</span>
       </a>
     </div>
-
     <div class="topbar-actions">
       <button type="button" class="theme-btn" id="themeBtn" title="Cambiar tema" aria-label="Cambiar tema">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
@@ -49,6 +46,8 @@
     <a href="actualidad/">Actualidad</a>
     <a href="colecciones/">Colecciones</a>
     <a href="ministerios/">Ministerios</a>
+    <a href="%C2%BFQue_Necesito%/">¿Qué necesito?</a>
+    <a href="buscar/?ambito=tramites">Trámites</a>
     <a href="guia-didactica/">Guía Didáctica</a>
     <a href="buscar/">Buscar</a>
     <a href="transparencia/">Transparencia</a>
@@ -90,10 +89,8 @@
 
     <main>
       <div class="clock-badge" id="clockBadge">—</div>
-
       <p class="hero-descriptor">Nexo de información pública y memoria documental</p>
       <h1 class="hero-title">Un punto de acceso organizado a fuentes oficiales y documentos históricos</h1>
-
       <p class="intro">
         CorpusChile nace de la necesidad de disponer, desde la formación en Administración Pública,
         de un acceso claro a fuentes oficiales, documentos históricos y recursos institucionales.
@@ -138,6 +135,50 @@
           </div>
         </div>
       </div>
+
+      <!-- NUEVO: ¿Qué necesito? -->
+      <section class="section-block" aria-labelledby="necesito-title">
+        <h2 id="necesito-title">¿Qué necesito?</h2>
+        <p class="section-lead" style="color:var(--grey);font-size:14px;margin:0 0 14px;line-height:1.5">
+          Acceso rápido a trámites, certificados y beneficios del Estado a partir de información pública de ChileAtiende.
+        </p>
+        <div class="col-chips">
+          <a class="col-chip" href="%C2%BFQue_Necesito%/">Ver todos los trámites</a>
+          <a class="col-chip" href="buscar/?q=certificado">Certificados</a>
+          <a class="col-chip" href="buscar/?q=bono">Bonos y beneficios</a>
+          <a class="col-chip" href="buscar/?q=jubilaci%C3%B3n">Jubilación</a>
+          <a class="col-chip" href="buscar/?q=beca">Becas y créditos</a>
+          <a class="col-chip" href="buscar/?q=salud">Salud</a>
+          <a class="col-chip" href="buscar/?q=vivienda">Vivienda</a>
+        </div>
+        <a class="guide-more" href="%C2%BFQue_Necesito%/">Ir a ¿Qué necesito? →</a>
+      </section>
+
+      <!-- NUEVO: Trámites y beneficios (temas ChileAtiende) -->
+      <section class="section-block" aria-labelledby="tramites-title">
+        <h2 id="tramites-title">Trámites y beneficios del Estado</h2>
+        <div class="guide-list">
+          <a class="guide-item" href="buscar/?q=certificados">Certificados</a>
+          <a class="guide-item" href="buscar/?q=bonos+beneficios">Bonos y beneficios del Estado</a>
+          <a class="guide-item" href="buscar/?q=jubilaci%C3%B3n">Jubilación</a>
+          <a class="guide-item" href="buscar/?q=becas+cr%C3%A9ditos">Becas y créditos</a>
+          <a class="guide-item" href="buscar/?q=discapacidad">Discapacidad</a>
+          <a class="guide-item" href="buscar/?q=trabajo+cesant%C3%ADa">Trabajo y cesantía</a>
+          <a class="guide-item" href="buscar/?q=familia">Pareja y familia</a>
+          <a class="guide-item" href="buscar/?q=emprendimiento">Emprendimiento e innovación</a>
+          <a class="guide-item" href="buscar/?q=educaci%C3%B3n">Educación</a>
+          <a class="guide-item" href="buscar/?q=salud">Salud</a>
+          <a class="guide-item" href="buscar/?q=transporte">Transporte</a>
+          <a class="guide-item" href="buscar/?q=previsi%C3%B3n">Previsión y seguridad laboral</a>
+          <a class="guide-item" href="buscar/?q=pueblos+originarios">Pueblos originarios</a>
+          <a class="guide-item" href="buscar/?q=chilenos+exterior">Chilenos en el exterior</a>
+          <a class="guide-item" href="buscar/?q=cultura">Cultura y recreación</a>
+          <a class="guide-item" href="buscar/?q=medioambiente">Medioambiente</a>
+          <a class="guide-item" href="buscar/?q=vivienda">Vivienda</a>
+          <a class="guide-item" href="buscar/?q=deporte">Deporte</a>
+        </div>
+        <a class="guide-more" href="%C2%BFQue_Necesito%/">Explorar corpus de trámites →</a>
+      </section>
 
       <!-- Colecciones -->
       <section class="section-block" aria-labelledby="col-title">
