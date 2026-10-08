@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buscar — CorpusChile</title>
+<title>Tramites — CorpusChile</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -194,13 +194,13 @@
   <main>
     <a class="search-view-back" href="index.html">← Volver a la portada</a>
     <h1 class="search-view-title">Resultados para "<span id="searchViewQuery"></span>"</h1>
-    <p class="search-view-subtitle">Búsqueda de texto completo en el archivo del Diario Oficial.</p>
+    <p class="search-view-subtitle">¿Que tramite quieres hacer Hoy?</p>
 
     <div class="search-view-filters">
-      <label>Año
+      <label>Lista
         <select id="filterYear"><option value="">Todos</option></select>
       </label>
-      <label>Día
+      <label>Tipo
         <select id="filterDay"><option value="">Todos</option></select>
       </label>
     </div>
@@ -218,52 +218,12 @@
   const rawQuery = params.get('q') || '';
   document.getElementById('searchViewQuery').textContent = rawQuery;
 
-  const filterYear = document.getElementById('filterYear');
-  const filterDay = document.getElementById('filterDay');
-  const searchViewList = document.getElementById('searchViewList');
+  const claveunica = document.getElementById('filterYear');
+  const cedula_de_identidad = document.getElementById('filterDay');
+  const beca = document.getElementById('searchViewList');
   const searchViewCount = document.getElementById('searchViewCount');
 
-  function populateFilters(){
-    const years = [...new Set(archiveDocs.filter(d => d.date).map(d => d.date.year))].sort();
-    const days = [...new Set(archiveDocs.filter(d => d.date).map(d => d.date.day))].sort((a,b) => a - b);
-    years.forEach(y => {
-      const opt = document.createElement('option');
-      opt.value = y; opt.textContent = y;
-      filterYear.appendChild(opt);
-    });
-    days.forEach(day => {
-      const opt = document.createElement('option');
-      opt.value = day; opt.textContent = day;
-      filterDay.appendChild(opt);
-    });
-  }
-
-  function renderResults(){
-    const q = normalize(rawQuery);
-    let subset = archiveDocs;
-    if(filterYear.value) subset = subset.filter(d => d.date && String(d.date.year) === filterYear.value);
-    if(filterDay.value) subset = subset.filter(d => d.date && String(d.date.day) === filterDay.value);
-
-    const matches = q === '' ? [] : getArchiveMatches(q, subset, 200);
-
-    renderFulltextList(searchViewList, matches, (id) => {
-      // Clic en un resultado: navega de vuelta a la página principal (real,
-      // con su propia URL) y abre ahí el documento correspondiente.
-      window.location.href = 'index.html#doc-' + id;
-    });
-
-    if(matches.length === 0){
-      searchViewList.innerHTML = '<p class="no-results-view">No se encontraron coincidencias con estos filtros.</p>';
-    }
-    searchViewCount.innerHTML = `<strong>${matches.length}</strong> resultado${matches.length === 1 ? '' : 's'}`;
-  }
-
-  filterYear.addEventListener('change', renderResults);
-  filterDay.addEventListener('change', renderResults);
-
-  populateFilters();
-  renderResults();
-
+  
   // Modo oscuro/claro, igual que en la portada
   const themeBtn = document.getElementById('themeBtn');
   const themeIconSun = document.getElementById('themeIconSun');
