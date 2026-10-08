@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CorpusChile — Trámites</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#111827; --ink-soft:#374151; --grey:#6B7280; --grey-line:#D8DCE3;
+      --paper:#FCFCFB; --paper-raised:#fff; --accent:#003B82; --accent-deep:#002A5C;
+      --serif:'Source Serif 4',Georgia,serif; --sans:Inter,-apple-system,sans-serif;
+    }
+    html[data-theme="dark"]{
+      --ink:#EDEAF4; --ink-soft:#C9C3DA; --grey:#8B84A3; --grey-line:#322C42;
+      --paper:#15121D; --paper-raised:#1C1826; --accent:#9D6DF0; --accent-deep:#B892F5;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper)}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{color:var(--accent-deep);text-decoration:underline}
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 28px;background:var(--paper-raised);border-bottom:1px solid var(--grey-line);
+    }
+    .brand{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+    .theme-btn{
+      width:32px;height:32px;border:1px solid var(--grey-line);border-radius:3px;
+      background:none;color:var(--ink-soft);cursor:pointer;
+    }
+    main{max-width:760px;margin:0 auto;padding:40px 24px 80px}
+    h1{font-family:var(--serif);font-size:28px;font-weight:600;margin:0 0 8px}
+    .sub{color:var(--grey);font-size:14px;margin:0 0 24px}
+    .search-box{
+      display:flex;gap:8px;margin-bottom:28px;
+    }
+    .search-box input{
+      flex:1;font-family:var(--sans);font-size:15px;padding:12px 14px;
+      border:1px solid var(--grey-line);border-radius:4px;background:var(--paper-raised);color:var(--ink);
+    }
+    .search-box button{
+      font-family:var(--sans);font-size:14px;font-weight:600;padding:12px 18px;
+      border:none;border-radius:4px;background:var(--accent);color:#fff;cursor:pointer;
+    }
+    .search-box button:hover{background:var(--accent-deep)}
+    .meta{font-size:13px;color:var(--grey);margin-bottom:16px}
+    .item{
+      padding:16px 0;border-bottom:1px solid var(--grey-line);
+    }
+    .item-title{
+      font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent);
+      cursor:pointer;display:block;margin-bottom:4px;
+    }
+    .item-title:hover{color:var(--accent-deep)}
+    .item-cat{font-size:12px;color:var(--grey);margin-bottom:6px}
+    .item-snip{font-size:13.5px;color:var(--ink-soft);line-height:1.55}
+    .empty{color:var(--grey);font-family:var(--serif);padding:24px 0}
+    mark{background:#fde68a;color:inherit;padding:0 2px;border-radius:2px}
+    html[data-theme="dark"] mark{background:#5b21b6;color:#fff}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <span class="brand">CorpusChile</span>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Cambiar tema">◐</button>
+  </header>
+
+  <main>
+    <h1>Trámites y beneficios</h1>
+    <p class="sub">¿Qué trámite quieres hacer hoy?</p>
+
+    <form class="search-box" id="searchForm">
+      <input type="search" id="q" placeholder="Ej: certificado de antecedentes, bono, Fonasa…" autocomplete="off">
+      <button type="submit">Buscar</button>
+    </form>
+
+    <p class="meta" id="count"></p>
+    <div id="list"></div>
+  </main>
+
+  <script src="assets/js/corpus-data.js"></script>
+  <script>
+    const corpus = window.CORPUS || [];
+    const listEl = document.getElementById('list');
+    const countEl = document.getElementById('count');
+    const qEl = document.getElementById('q');
+
+    // Tema
+    document.getElementById('themeBtn').addEventListener('click', () => {
+      const dark = document.documentElement.dataset.theme === 'dark';
+      if (dark) document.documentElement.removeAttribute('data-theme');
+      else document.documentElement.dataset.theme = 'dark';
+    });
+
+    function normalizar(s) {
+      return (s || '').toLowerCase()
+        .normalize('NFD').replace(/\p{Diacritic}/gu, '');
+    }
+
+    function snippet(texto, query, max = 180) {
+      const t = texto || '';
+      const nq = normalizar(query);
+      if (!nq) return t.slice(0, max) + (t.length > max ? '…' : '');
+      const nt = normalizar(t);
+      const i = nt.indexOf(nq);
+      if (i < 0) return t.slice(0, max) + (t.length > max ? '…' : '');
+      const start = Math.max(0, i - 40);
+      const end = Math.min(t.length, i + query.length + 120);
+      let piece = (start > 0 ? '…' : '') + t.slice(start, end) + (end < t.length ? '…' : '');
+      // resaltar (simple, sin romper HTML)
+      const re = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig');
+      return piece.replace(re, '<mark>$1</mark>');
+    }
+
+    function buscar(query) {
+      const nq = normalizar(query).trim();
+      if (!nq) return corpus.slice(0, 40); // portada: primeros 40
+      const tokens = nq.split(/\s+/).filter(Boolean);
+      return corpus.filter(item => {
+        const haystack = normalizar(item.titulo + ' ' + item.categoria + ' ' + (item.texto || ''));
+        return tokens.every(tok => haystack.includes(tok));
+      });
+    }
+
+    function render(query) {
+      const results = buscar(query);
+      countEl.textContent = query.trim()
+        ? `${results.length} resultado${results.length === 1 ? '' : 's'} para “${query.trim()}”`
+        : `${corpus.length} fichas en el corpus`;
+
+      if (!results.length) {
+        listEl.innerHTML = '<p class="empty">No se encontraron trámites con esa búsqueda.</p>';
+        return;
+      }
+
+      listEl.innerHTML = results.map(item => `
+        <article class="item">
+          <a class="item-title" href="${item.url || '#'}" target="_blank" rel="noopener">
+            ${item.titulo}
+          </a>
+          <div class="item-cat">${item.categoria || ''}</div>
+          <div class="item-snip">${snippet(item.texto, query)}</div>
+        </article>
+      `).join('');
+    }
+
+    document.getElementById('searchForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const q = qEl.value.trim();
+      // URL compartible
+      const url = new URL(location.href);
+      if (q) url.searchParams.set('q', q);
+      else url.searchParams.delete('q');
+      history.replaceState(null, '', url);
+      render(q);
+    });
+
+    // Carga inicial desde ?q=
+    const params = new URLSearchParams(location.search);
+    const initial = params.get('q') || '';
+    qEl.value = initial;
+    render(initial);
+  </script>
+</body>
+</html>
