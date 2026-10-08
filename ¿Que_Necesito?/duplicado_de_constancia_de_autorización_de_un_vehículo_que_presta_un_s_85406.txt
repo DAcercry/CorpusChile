@@ -1,0 +1,141 @@
+TITULO: Duplicado de constancia de autorización de un vehículo que presta un servicio inscrito en el Registro Nacional de Transporte Privado Remunerado de Pasajeros (TTEPRIV)
+URL: https://www.chileatiende.gob.cl/fichas/85406-duplicado-de-constancia-de-autorizacion-de-un-vehiculo-de-un-servicio-inscrito-en-el-registro-nacional-de-transporte-privado-remunerado-de-pasajeros-ttepriv
+CATEGORIA: transporte
+FECHA_DESCARGA: 2026-10-08 11:14:16
+ORGANISMO: Instituciones que publican en ChileAtiende
+============================================================
+
+# ¿Dónde realizar este trámite?
+Sucursales ChileAtiende
+Sitio web de la Subtrans
+Correo electrónico de la Subtrans
+Oficinas de la Subtrans
+
+# Descripción
+Permite a los operadores solicitar un duplicado de la constancia de autorización de un vehículo que presta un servicio inscrito como Transporte Privado Remunerado de Pasajeros, autorización general (TTEPRIV), cuando existe la pérdida o deterioro de este documento.
+La constancia está disponible durante todo el año. La solicitud
+presencial
+o por
+correo electrónico
+debe realizarla en la Secretaría Regional Ministerial (SEREMI) correspondiente a la región en donde se encuentra inscrito el servicio.
+¿A quién va dirigido?
+Operadores de servicios interesados en solicitar el duplicado de constancia de autorización de un vehículo que presta un servicio de Transporte Privado Remunerado de Pasajeros, autorización general (TTEPRIV).
+¿Qué necesito para hacer el trámite?
+Antecedentes de la persona interesada
+:
+Para hacer el trámite en línea, debe tener
+ClaveÚnica
+.
+Formulario G
+firmado por el o la responsable del servicio registrado, solicitando el duplicado de la constancia de autorización e individualizando el vehículo.
+Si es persona natural:
+Cédula de identidad vigente y fotocopia por ambos lados.
+Si actúa a través de un mandatario o mandataria: escritura pública del mandato o del poder notarial, copia autorizada de estos, y cédula de identidad del mandatario o mandataria.
+Si es persona jurídica del tipo “Sociedad de Responsabilidad Limitada” o “Empresa Individual de Responsabilidad Limitada (EIRL)”:
+Escritura pública de constitución y/o copia autorizada.
+Inscripción en el Registro de Comercio y/o copia autorizada.
+Extracto de publicación en el Diario Oficial.
+Certificado de vigencia de la sociedad.
+Certificado de vigencia de los y/o las representantes legales.
+Cédula de identidad de los y/o las representantes legales.
+Si actúa a través de un mandatario o mandataria: escritura pública del mandato y/o copia autorizada, inscripción del mandato en el Registro de Comercio y copia autorizada, además del poder notarial y cédula de identidad del mandatario o mandataria.
+Si es persona jurídica del tipo “Sociedad Anónima”:
+Escritura pública de constitución de la sociedad y/o copia autorizada.
+Certificado de vigencia de la sociedad.
+Certificado de vigencia de los poderes de los y/o las representantes legales.
+Cédula de identidad de los y/o las representantes legales.
+Si actúa a través de un mandatario o mandataria: escritura pública del mandato y/o copia autorizada, además del poder notarial y cédula de identidad del mandatario o mandataria.
+Si es una persona jurídica acogida a la
+Ley Nº 20.659
+, que simplifica el régimen de constitución, modificación y disolución de las sociedades comerciales:
+Certificado de vigencia.
+Certificado de estatuto actualizado.
+Certificado de anotaciones, de la correspondiente persona jurídica, otorgados de conformidad con lo previsto en el
+artículo 29 del Decreto Supremo (DS) Nº 45, de 2013, del Ministerio de Economía, Fomento y Turismo
+.
+Importante:
+los documentos no deben haber sido emitidos con más de un mes de anterioridad a la presentación de los mismos.
+Antecedentes de los vehículos
+:
+En caso de extravío, debe acompañar una declaración jurada ante notario o notaria que de constancia del hecho.
+En caso de deterioro, se debe devolver el CERT a reemplazar, en el estado en que se encuentre.
+Certificado de inscripción
+y
+anotaciones vigentes
+de vehículos motorizados (CAV) en el Registro Nacional de Vehículos Motorizados del Servicio de Registro Civil e Identificación. El CAV no será necesario, siempre y cuando la secretaría regional respectiva, mantenga contacto en línea con el Registro de Vehículos Motorizados del Registro Civil.
+De encontrarse en proceso la acreditación de propiedad en el Registro Civil, se puede acompañar la factura de compraventa, más la solicitud de primera inscripción o de transferencia, según corresponda, en el Registro Nacional de Vehículos Motorizados de Registro Civil.
+Si corresponde a un vehículo en leasing, debe acreditar el leasing y presentar un documento del propietario o propietaria que autoriza a utilizar el vehículo para la prestación del servicio.
+Si corresponde a un vehículo cuyos dueños o dueñas son una comunidad, debe acompañarse la escritura pública del mandato de la comunidad y/o el poder notarial de su representante.
+Fotocopia de certificado de revisión técnica. Este documento no será necesario, mientras la Secretaría Regional respectiva, mantenga contacto en línea con el sistema de gestión de Plantas de Revisiones Técnicas (PRT). Si el vehículo es homologado, debe presentar la fotocopia del certificado de homologación, llenado por la municipalidad y un certificado de características, otorgado por una PRT.
+¿Qué vigencia tiene?
+Tiene vigencia por el período que se indica en cada constancia de autorización, la cual está determinada por la normativa vigente o por resoluciones regionales.
+¿Cómo y dónde hago el trámite?
+devices
+En línea
+store
+En oficina
+mail
+Correo
+- Instrucciones Trámite en línea
+Reúna los antecedentes requeridos.
+Haga clic en "solicitar duplicado".
+Una vez en el sitio web de Subtrans, ingrese el RUN de la persona natural, o del o de la representante legal, escriba su ClaveÚnica, y haga clic en "continuar". Si no tiene ClaveÚnica,
+solicítela
+.
+Complete la información, adjunte los antecedentes solicitados, y haga clic en "siguiente".
+Valide los datos y documentos ingresados.
+Haga clic en "enviar".
+Como resultado del trámite, habrá solicitado el duplicado de la o las constancias de autorización para el Transporte Privado Remunerado de Pasajeros, autorización general (TTEPRIV). Tendrá respuesta a su requerimiento en un plazo máximo de 20 días hábiles.
+- Instrucciones Trámite en Sucursal
+Reúna los antecedentes requeridos.
+Diríjase a la
+oficina de la Secretaría Regional Ministerial de Transporte y Telecomunicaciones
+correspondiente a la región donde se encuentra inscrito el servicio.
+Explique el motivo de su visita: solicitar el duplicado de la constancia de autorización de un vehículo que presta un servicio inscrito en el Registro Nacional de Transporte Privado Remunerado de Pasajeros (TTEPRIV).
+Entregue los antecedentes requeridos.
+Como resultado del trámite, habrá solicitado el duplicado de la constancia de autorización para el Transporte Privado Remunerado de Pasajeros, autorización general (TTEPRIV). Tendrá respuesta a su requerimiento en un plazo máximo de 20 días hábiles.
+- Instrucciones trámite por Email
+Reúna los antecedentes requeridos.
+Envíelos al
+correo electrónico disponible según la región donde se encuentra inscrito el servicio
+.
+Como resultado del trámite, habrá solicitado el duplicado de la o las constancias de autorización para Transporte Privado Remunerado de Pasajeros, autorización general (TTEPRIV). Tendrá respuesta a su requerimiento en un plazo máximo de 20 días hábiles.
+- Instrucciones trámite en el Consulado
+¿Cuál es el costo del trámite?
+No tiene costo.
+Marco Legal
+Decreto Supremo (DS) Nº 80
+, de 2004, del Ministerio de Transportes y Telecomunicaciones.
+Información proporcionada por
+Subsecretaría de Transportes
+Descarga una versión PDF de esta página
+
+# ¿A quién va dirigido?
+
+# ¿Qué necesito para hacer el trámite?
+
+# ¿Qué vigencia tiene?
+
+# ¿Cómo y dónde hago el trámite?
+
+# ¿Cuál es el costo del trámite?
+
+# Marco Legal
+
+# Llámanos al 101
+Lunes a jueves, de 8:00 a 20:00 hrs.
+Viernes, de 8:00 a 18:00 hrs.
+
+# error_outline
+
+# ¿Qué alternativa prefieres para recordarte sobre Duplicado de constancia de autorización de un vehículo que presta un servicio inscrito en el Registro Nacional de Transporte Privado Remunerado de Pasajeros (TTEPRIV) ?
+
+
+# Enlaces relacionados
+- Bono $30 mil por hijo → https://www.chileatiende.gob.cl/fichas/144481-bono-30-mil-por-hijo
+- Gratuidad 2027 → https://www.chileatiende.gob.cl/fichas/43203-gratuidad-en-la-educacion-superior
+- ClaveÚnica → https://www.chileatiende.gob.cl/fichas/11331-clave-unica
+- Certificado de inscripción → https://www.chileatiende.gob.cl/fichas/3412-certificado-de-inscripcion-de-vehiculos-motorizados-padron
+- anotaciones vigentes → https://www.chileatiende.gob.cl/fichas/3370-certificado-de-anotaciones-vigentes-de-vehiculos-motorizados
+- Descarga una versión PDF de esta página → https://www.chileatiende.gob.cl/fichas/85406/1/pdf
+- Descargar recordatorio → https://www.chileatiende.gob.cl/fichas/110416/recordatorios

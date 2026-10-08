@@ -1,0 +1,154 @@
+TITULO: Inscripción de un bus, trolebús y minibús por ingreso directo o primera inscripción de un servicio de locomoción colectiva en el RNSTP
+URL: https://www.chileatiende.gob.cl/fichas/28060-inscripcion-de-un-bus-trolebus-y-minibus-por-ingreso-directo-o-primera-inscripcion-de-un-servicio-de-locomocion-colectiva-en-el-rnstp
+CATEGORIA: transporte
+FECHA_DESCARGA: 2026-10-08 11:12:04
+ORGANISMO: Instituciones que publican en ChileAtiende
+============================================================
+
+# Descripción
+Permite a los operadores inscribir un bus, trolebús y minibús por ingreso directo en un servicio de locomoción colectiva que forma parte del Registro Nacional de Servicios de Transporte de Pasajeros (RNSTP), a cargo de la Subsecretaría de Transportes.
+El trámite está disponible durante todo el año en el
+sitio web de Subtrans
+, además de la
+oficina y correo electrónico de la Secretaría Regional Ministerial (SEREMI) de Transportes y Telecomunicaciones
+en la que se encuentra inscrito el servicio.
+¿A quién va dirigido?
+Operadores de servicios interesados en inscribir un bus, trolebús y minibús, por ingreso directo en un servicio de locomoción colectiva que forma parte del Registro Nacional de Servicios de Transporte de Pasajeros (RNSTP).
+¿Qué necesito para hacer el trámite?
+Antecedentes de la persona interesada
+:
+Si realiza el trámite en línea, la persona natural o jurídica (por medio de su representante legal) debe tener
+ClaveÚnica
+.
+Formulario Nº 1
+, firmado por el o la responsable del servicio por registrar. Es necesario individualizar el vehículo e indicar que se trata de la primera inscripción en el Registro Nacional de Servicios de Transporte de Pasajeros (RNSTP).
+Formulario Nº 3
+, firmado por el o la responsable del servicio, y el propietario o propietaria del vehículo, como constancia de un título que habilita al interesado o interesada a destinarlo al servicio. Si se trata de más de un vehículo, los propietarios o propietarias deben individualizarlos y firmar la constancia.
+Si es una persona natural
+:
+Cédula de identidad vigente y fotocopia por ambos lados.
+Si actúa a través de un mandatario o mandataria: escritura pública del mandato o del poder notarial (incluyendo la copia autorizada), y cédula de identidad del mandatario o mandataria.
+Si es una persona jurídica del tipo “Sociedad de Responsabilidad Limitada” o “Empresa Individual de Responsabilidad Limitada (EIRL)”
+:
+Escritura pública de constitución y/o copia autorizada.
+Inscripción en el Registro de Comercio y/o copia autorizada.
+Extracto de la publicación en el Diario Oficial.
+Certificado de vigencia de la sociedad.
+Certificado de vigencia de los y/o las representantes legales.
+Cédula de identidad de los y/o las representantes.
+Si actúa a través de un mandatario o mandataria: escritura pública del mandato y/o copia autorizada, inscripción del mandato en el Registro de Comercio (incluyendo la copia autorizada), poder notarial y cédula de identidad del mandatario o mandataria.
+Si es una persona jurídica del tipo Sociedad Anónima
+:
+Escritura pública de constitución de la sociedad y/o copia autorizada.
+Certificado de vigencia de la sociedad.
+Certificado de vigencia de los y/o las representantes legales.
+Cédula de identidad de los y/o las representantes legales.
+Si actúa a través de un mandatario o mandataria: escritura pública del mandato y/o copia autorizada, poder notarial y cédula de identidad del mandatario o mandataria.
+Si es una persona jurídica acogida a la
+Ley Nº 20.659
+, que simplifica el régimen de constitución, modificación y disolución de las sociedades comerciales
+:
+Certificado de vigencia.
+Certificado de estatuto actualizado.
+Certificado de anotaciones de la correspondiente persona jurídica, otorgado según el
+artículo 29 del Decreto Supremo (DS) Nº 45, de 2013, del Ministerio de Economía, Fomento y Turismo
+.
+Importante
+: los documentos no deben haber sido emitidos con más de un mes de anterioridad a su presentación.
+Antecedentes de los vehículos
+:
+Certificado de inscripción
+y
+Certificado de Anotaciones Vigentes (CAV)
+de vehículos motorizados en el Registro Nacional de Vehículos Motorizados del Servicio de Registro Civil e Identificación (SRCeI). El CAV no será necesario si la Secretaría Regional Ministerial (SEREMI) de Transportes y Telecomunicaciones mantiene contacto en línea con el Registro de Vehículos Motorizados del Registro Civil.
+Si se encuentra en proceso de acreditación de propiedad en el Registro Civil, puede acompañar la factura de compraventa más la solicitud de primera inscripción o transferencia, según corresponda, en el Registro Nacional de Vehículos Motorizados del Registro Civil.
+Si corresponde a un vehículo en leasing, debe entregar el documento que lo acredite y del propietario o propietaria que autoriza al vehículo para prestar el servicio.
+Si corresponde a un vehículo de una comunidad, debe acompañar la escritura pública del mandato de la comunidad y/o el poder notarial de su representante.
+Fotocopia de certificado de revisión técnica. No será necesario si la Secretaría Regional Ministerial (SEREMI) de Transportes y Telecomunicaciones respectiva está en línea con el sistema de gestión de Plantas de Revisiones Técnicas (PRT). Si el vehículo es homologado, debe presentar la fotocopia del certificado de homologación de la municipalidad que corresponda y el certificado de características, otorgado por una Planta de Revisión Técnica (PRT).
+Certificado de características o de inspección visual otorgado por una Planta de Revisión Técnica (PRT) que acredite que el vehículo es apto para el tipo de servicio a prestar.
+En caso de que el vehículo corresponda a un servicio subsidiado o bajo el marco de condiciones de operación, debe acompañar documentación referida a dichos procesos.
+¿Qué vigencia tiene?
+Por el período que se indica en cada certificado, el que está determinado por la normativa vigente o por resoluciones regionales, según corresponda.
+¿Cómo y dónde hago el trámite?
+devices
+En línea
+store
+En oficina
+mail
+Correo
+- Instrucciones Trámite en línea
+Reúna los antecedentes requeridos.
+Haga clic en “Solicitar inscripción”.
+Una vez en el sitio web de la Subsecretaría de Transportes, ingrese su RUN y escriba su ClaveÚnica, y haga clic en “Continuar”. Si no la tiene,
+solicítela
+.
+Seleccione “Empresa” o “Persona natural”, y haga clic en “Siguiente”.
+Complete la información, adjunte los antecedentes solicitados, y haga clic en “Siguiente”.
+Valide los datos y documentos ingresados.
+Pague el costo del trámite, y haga clic en “Enviar”.
+Como resultado del trámite, habrá solicitado la inscripción. Tendrá respuesta a su requerimiento en un plazo máximo de 20 días hábiles. De ser aprobada, obtendrá la resolución que autoriza el servicio y los certificados de inscripción en el registro, que permite a cada vehículo realizar el servicio de transporte público registrado.
+- Instrucciones Trámite en Sucursal
+Reúna los antecedentes requeridos.
+Diríjase a la
+oficina de la Secretaría Regional Ministerial de Transporte y Telecomunicaciones
+de la región donde se encuentra inscrito el servicio.
+Explique el motivo de su visita: solicitar la inscripción de un bus, trolebús y minibús, por ingreso directo en un servicio de locomoción colectiva que forma parte del Registro Nacional de Servicios de Transporte de Pasajeros (RNSTP).
+Entregue los antecedentes requeridos.
+Pague el valor que corresponde.
+Como resultado del trámite, habrá solicitado la inscripción. Tendrá respuesta a su requerimiento en un plazo máximo de 20 días hábiles. De ser aprobada, obtendrá la resolución que autoriza el servicio y los certificados de inscripción en el registro, que permite a cada vehículo realizar el servicio de transporte público registrado.
+- Instrucciones trámite por Email
+Reúna los antecedentes requeridos.
+Envíelos al
+correo electrónico disponible según la región donde se encuentra inscrito el servicio
+.
+Como resultado del trámite, habrá solicitado la inscripción. Tendrá respuesta a su requerimiento en un plazo máximo de 20 días hábiles. De ser aprobada, obtendrá la resolución que autoriza el servicio y los certificados de inscripción en el registro, que permite a cada vehículo realizar el servicio de transporte público registrado.
+- Instrucciones trámite en el Consulado
+¿Cuál es el costo del trámite?
+$790 por cada certificado correspondiente a un recorrido troncal por vehículo.
+$530 por cada certificado correspondiente al recorrido variante por vehículo.
+Marco Legal
+Decreto Supremo (DS) Nº 212, de 1992
+.
+Decreto Supremo (DS) Nº 1, de 2004
+.
+Decreto Supremo (DS) Nº 211, de 1995
+.
+Decreto Supremo (DS) Nº 12, de 1999
+.
+Resolución Nº 132, de 1994
+.
+Ley Nº 20.378
+.
+Información proporcionada por
+Subsecretaría de Transportes
+Descarga una versión PDF de esta página
+
+# ¿A quién va dirigido?
+
+# ¿Qué necesito para hacer el trámite?
+
+# ¿Qué vigencia tiene?
+
+# ¿Cómo y dónde hago el trámite?
+
+# ¿Cuál es el costo del trámite?
+
+# Marco Legal
+
+# Llámanos al 101
+Lunes a jueves, de 8:00 a 20:00 hrs.
+Viernes, de 8:00 a 18:00 hrs.
+
+# error_outline
+
+# ¿Qué alternativa prefieres para recordarte sobre Inscripción de un bus, trolebús y minibús por ingreso directo o primera inscripción de un servicio de locomoción colectiva en el RNSTP ?
+
+
+# Enlaces relacionados
+- Bono $30 mil por hijo → https://www.chileatiende.gob.cl/fichas/144481-bono-30-mil-por-hijo
+- Gratuidad 2027 → https://www.chileatiende.gob.cl/fichas/43203-gratuidad-en-la-educacion-superior
+- ClaveÚnica → https://www.chileatiende.gob.cl/fichas/11331-clave-unica
+- Certificado de inscripción → https://www.chileatiende.gob.cl/fichas/3412-certificado-de-inscripcion-de-vehiculos-motorizados-padron
+- Certificado de Anotaciones Vigentes (CAV) → https://www.chileatiende.gob.cl/fichas/3370-certificado-de-anotaciones-vigentes-de-vehiculos-motorizados
+- Descarga una versión PDF de esta página → https://www.chileatiende.gob.cl/fichas/28060/1/pdf
+- Descargar recordatorio → https://www.chileatiende.gob.cl/fichas/111944/recordatorios

@@ -1,0 +1,64 @@
+TITULO: Encargo y búsqueda de vehículos (consulta en el sistema)
+URL: https://www.chileatiende.gob.cl/fichas/25160-encargo-y-busqueda-de-vehiculos-consulta-en-el-sistema
+CATEGORIA: transporte
+FECHA_DESCARGA: 2026-10-08 11:11:47
+ORGANISMO: Instituciones que publican en ChileAtiende
+============================================================
+
+# Descripción
+Consulta a través de la plataforma API Auto Seguro
+si un vehículo tiene encargo por robo
+. Este servicio te permite verificar en segundos antes de comprarlo o circular con él.
+Además, el sitio web entrega
+recomendaciones para prevenir robos
+, denunciar un vehículo sustraído y detectar posibles casos de clonación vehicular.
+Haz tu consulta durante todo el año a través del
+sitio web API Auto Seguro
+.
+Revisa los antecedentes requeridos
+Para consultar los datos de un vehículo motorizado no necesitas ningún documento, solamente debes conocer uno de los siguientes datos:
+La placa patente.
+El VIN (número de chasis).
+El número del motor del vehículo.
+Consulta los datos de un vehículo
+Comprueba si un vehículo tiene encargo por robo a través del
+sitio web de Auto Seguro
+.
+Si la información contiene alguna imprecisión,
+completa el formulario de antecedentes
+destinado al registro y análisis de inconvenientes asociados a encargos y soluciones de vehículos.
+Información proporcionada por
+Carabineros de Chile
+Descarga una versión PDF de esta página
+
+# Revisa los antecedentes requeridos
+
+# Consulta los datos de un vehículo
+
+# Llámanos al 101
+Lunes a jueves, de 8:00 a 20:00 hrs.
+Viernes, de 8:00 a 18:00 hrs.
+
+# error_outline
+
+# ¿Qué alternativa prefieres para recordarte sobre Encargo y búsqueda de vehículos (consulta en el sistema) ?
+
+# Certificado de anotaciones vigentes de vehículos motorizados
+Si compraste un vehículo o estás interesado en comprar uno, el certificado de anotaciones vigentes t...
+
+# Certificado de inscripción de vehículos motorizados (padrón)
+El certificado de inscripción de vehículos motorizados, también conocido como padrón, contiene:
+Los...
+
+# Certificado de multas de tránsito no pagadas
+Este documento te permite saber si tu vehículo, o el que quieres comprar, tiene multas o infraccione...
+
+
+# Enlaces relacionados
+- Bono $30 mil por hijo → https://www.chileatiende.gob.cl/fichas/144481-bono-30-mil-por-hijo
+- Gratuidad 2027 → https://www.chileatiende.gob.cl/fichas/43203-gratuidad-en-la-educacion-superior
+- Descarga una versión PDF de esta página → https://www.chileatiende.gob.cl/fichas/25160/1/pdf
+- Descargar recordatorio → https://www.chileatiende.gob.cl/fichas/143805/recordatorios
+- Certificado de anotaciones vigentes de vehículos motorizados → https://www.chileatiende.gob.cl/fichas/3370-certificado-de-anotaciones-vigentes-de-vehiculos-motorizados
+- Certificado de inscripción de vehículos motorizados (padrón) → https://www.chileatiende.gob.cl/fichas/3412-certificado-de-inscripcion-de-vehiculos-motorizados-padron
+- Certificado de multas de tránsito no pagadas → https://www.chileatiende.gob.cl/fichas/3439-certificado-de-multas-de-transito-no-pagadas

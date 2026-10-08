@@ -1,0 +1,145 @@
+TITULO: Cambio de propietario (transferencia) de vehículos inscritos en el Registro Nacional de Servicios de Transporte Remunerado de Escolares (RENASTRE)
+URL: https://www.chileatiende.gob.cl/fichas/85979-cambio-de-propietario-transferencia-de-vehiculos-inscritos-en-el-registro-nacional-de-servicios-de-transporte-remunerado-de-escolares-renastre
+CATEGORIA: transporte
+FECHA_DESCARGA: 2026-10-08 11:14:25
+ORGANISMO: Instituciones que publican en ChileAtiende
+============================================================
+
+# Descripción
+Permite a los operadores cambiar el propietario o propietaria (transferencia) de un vehículo inscrito en un servicio en el Registro Nacional de Servicios de Transportes Remunerado de Escolares (RENASTRE), a cargo de la Subsecretaría de Transportes.
+El trámite está disponible durante todo el año
+en línea, oficinas y correo electrónico
+de la Secretaría Regional Ministerial (SEREMI) de Transportes y Telecomunicaciones correspondiente a la región en donde se encuentra inscrito el servicio.
+¿A quién va dirigido?
+Operadores de servicios interesados en el cambio de propietario o propietaria de un vehículo inscrito en un servicio en el Registro Nacional de Servicios de Transportes Remunerado de Escolares (RENASTRE).
+¿Qué necesito para hacer el trámite?
+Si realiza el trámite en línea, debe tener
+ClaveÚnica
+.
+Antecedentes de la persona interesada
+:
+Si hace el trámite en línea, debe tener la
+ClaveÚnica
+.
+Formulario RENASTRE
+firmado por el o la responsable del servicio registrado, incluyendo la individualización del vehículo.
+Si es persona natural:
+Cédula de identidad vigente y fotocopia por ambos lados.
+Si realiza el trámite a través de un mandatario o mandataria: escritura pública del mandato o poder notarial, copia autorizada de estos, y cédula de identidad del mandatario o mandataria.
+Si es persona jurídica del tipo “Sociedad de Responsabilidad Limitada” o “Empresa Individual de Responsabilidad Limitada (EIRL)”:
+Escritura pública de constitución y/o copia autorizada.
+Inscripción en el Registro de Comercio y/o copia autorizada.
+Extracto de la publicación en el Diario Oficial.
+Certificado de vigencia de la sociedad.
+Certificado de vigencia de los y/o las representantes legales.
+Cédula de identidad de los y/o las representantes legales.
+Si actúa a través de un mandatario o mandataria: escritura pública del mandato y/o copia autorizada, inscripción del mandato en el Registro de Comercio y copia autorizada, poder notarial y cédula de identidad del mandatario o mandataria.
+Si es persona jurídica del tipo Sociedad Anónima:
+Escritura pública de constitución de la sociedad y/o copia autorizada.
+Certificado de vigencia de la sociedad.
+Certificado de vigencia de los poderes de los y/o las representantes legales.
+Cédula de identidad de los y/o las representantes legales.
+Si actúa a través de un mandatario o mandataria: escritura pública del mandato y/o copia autorizada, poder notarial y cédula de identidad del mandatario y/o mandataria.
+Si es una persona jurídica acogida a la
+Ley Nº 20.659
+, que simplifica el régimen de constitución, modificación y disolución de las sociedades comerciales:
+Certificado de vigencia.
+Certificado de estatuto actualizado.
+Certificado de anotaciones de la correspondiente persona jurídica, otorgados según el
+artículo 29 del Decreto Supremo (DS) Nº 45, de 2013, del Ministerio de Economía, Fomento y Turismo
+.
+Importante
+: los documentos no deben haber sido emitidos con más de un mes de anterioridad a su presentación.
+Antecedentes de los vehículos
+:
+Certificado de inscripción
+y
+anotaciones vigentes
+de vehículos motorizados (CAV) en el Registro Nacional de Vehículos Motorizados del Servicio de Registro Civil e Identificación. El CAV no será necesario si la Secretaría Regional Ministerial (SEREMI) respectiva mantiene contacto en línea con el Registro de Vehículos Motorizados del Registro Civil.
+De encontrarse en proceso la acreditación de propiedad en el Registro Civil, se puede acompañar factura de compraventa más la solicitud de primera inscripción o de transferencia, según corresponda, en el Registro Nacional de Vehículos Motorizados de Registro Civil.
+Si corresponde a un vehículo en leasing, debe acompañar antecedente que acredite el leasing, y presentar documento del propietario o propietaria que autoriza a utilizar el vehículo para la prestación del servicio.
+Si corresponde a un vehículo cuyos dueños son una comunidad, debe acompañar la escritura pública del mandato de la comunidad y/o el poder notarial de su representante.
+Fotocopia de certificado de revisión técnica. Este no será necesario mientras la SEREMI respectiva mantenga contacto en línea con Sistema de Gestión de Plantas de Revisiones Técnicas. Si el vehículo es homologado, se debe presentar fotocopia del certificado de homologación, completado por la municipalidad que certifica.
+Acreditación de pago
+: copia de la transferencia realizada para pagar el trámite. Más información en la sección “¿Cuál es el costo del trámite
+?
+”.
+¿Qué vigencia tiene?
+Por el período que se indica en cada certificado, el cual está determinado por la normativa vigente o por resoluciones regionales, según corresponda.
+¿Cómo y dónde hago el trámite?
+devices
+En línea
+store
+En oficina
+mail
+Correo
+- Instrucciones Trámite en línea
+Reúna los antecedentes requeridos.
+Haga clic en “Ir al trámite en línea”.
+Una vez en el sitio web de Subtrans, haga clic en “Ir al trámite”.
+Escriba su RUN y ClaveÚnica, y haga clic en “Continuar”. Si no la tiene,
+solícitela
+.
+Complete el formulario indicando datos del nuevo propietario o propietaria, y la o las placas patentes de los vehículos.
+Valide los datos y antecedentes ingresados.
+Adjunte el comprobante de pago del documento seleccionando “Pago”.
+Haga clic en “Enviar”.
+Como resultado de un trámite, habrá solicitado el cambio. Si el propietario o propietaria es responsable del servicio, obtendrá un certificado de inscripción, en caso contrario, solo se actualiza el nombre del propietario o propietaria en RENASTRE.
+- Instrucciones Trámite en Sucursal
+Reúna los antecedentes requeridos.
+Diríjase a la
+oficina de la Secretaría Regional Ministerial de Transporte y Telecomunicaciones
+correspondiente a la región donde se encuentra inscrito el servicio.
+Explique el motivo de su visita: solicitar el cambio de propietario o propietaria (transferencia) de un vehículo inscrito en el Registro Nacional de Servicios de Transporte Remunerado de Escolares (RENASTRE).
+Entregue los antecedentes requeridos.
+Como resultado de un trámite, habrá solicitado el cambio. Si el propietario o propietaria es responsable del servicio, obtendrá un certificado de inscripción, en caso contrario, solo se actualiza el nombre del propietario o propietaria en RENASTRE.
+- Instrucciones trámite por Email
+Reúna los antecedentes requeridos.
+Envíelos al
+correo electrónico disponible según la región donde se encuentra inscrito el servicio
+.
+Como resultado de un trámite, habrá solicitado el cambio. Si el propietario o propietaria es responsable del servicio, obtendrá un certificado de inscripción, en caso contrario, solo se actualiza el nombre del propietario o propietaria en RENASTRE.
+- Instrucciones trámite en el Consulado
+¿Cuál es el costo del trámite?
+$1.000 el certificado de inscripción de cada vehículo en que el propietario o propietaria corresponde al responsable del servicio.
+El pago debe realizarse antes de hacer la solicitud
+, por transferencia a la cuenta corriente Nº 901265-6 de BancoEstado, a nombre de la Subsecretaría de Transportes, RUT: 61.212.000-5.
+Marco Legal
+Decreto Nº 38
+, de 1992.
+Decreto Nº 38
+, de 2003.
+Información proporcionada por
+Subsecretaría de Transportes
+Descarga una versión PDF de esta página
+
+# ¿A quién va dirigido?
+
+# ¿Qué necesito para hacer el trámite?
+
+# ¿Qué vigencia tiene?
+
+# ¿Cómo y dónde hago el trámite?
+
+# ¿Cuál es el costo del trámite?
+
+# Marco Legal
+
+# Llámanos al 101
+Lunes a jueves, de 8:00 a 20:00 hrs.
+Viernes, de 8:00 a 18:00 hrs.
+
+# error_outline
+
+# ¿Qué alternativa prefieres para recordarte sobre Cambio de propietario (transferencia) de vehículos inscritos en el Registro Nacional de Servicios de Transporte Remunerado de Escolares (RENASTRE) ?
+
+
+# Enlaces relacionados
+- Bono $30 mil por hijo → https://www.chileatiende.gob.cl/fichas/144481-bono-30-mil-por-hijo
+- Gratuidad 2027 → https://www.chileatiende.gob.cl/fichas/43203-gratuidad-en-la-educacion-superior
+- ClaveÚnica → https://www.chileatiende.gob.cl/fichas/11331-clave-unica
+- ClaveÚnica → https://www.chileatiende.gob.cl/fichas/11331
+- Certificado de inscripción → https://www.chileatiende.gob.cl/fichas/3412
+- anotaciones vigentes → https://www.chileatiende.gob.cl/fichas/3370
+- Descarga una versión PDF de esta página → https://www.chileatiende.gob.cl/fichas/85979/1/pdf
+- Descargar recordatorio → https://www.chileatiende.gob.cl/fichas/116530/recordatorios
