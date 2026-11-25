@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colecciones — Diario Oficial | CorpusChile</title>
+  <meta name="description" content="Colección de Diarios Oficiales de Chile (1990, 2000 y 2001) con OCR. Busca por fecha y abre cada documento.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <style>
+    /* ===== Colecciones específicas ===== */
+    .colecciones-page {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    .colecciones-header {
+      margin-bottom: 28px;
+    }
+
+    .colecciones-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3vw, 1.9rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .colecciones-header p {
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+      max-width: 56ch;
+      line-height: 1.55;
+    }
+
+    /* Filtros */
+    .filters-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 220px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px 16px 12px 42px;
+      border: 1px solid var(--grey-line);
+      border-radius: 8px;
+      background: var(--paper-raised);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .search-box input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0, 59, 130, 0.08);
+    }
+
+    html[data-theme="dark"] .search-box input:focus {
+      box-shadow: 0 0 0 3px rgba(157, 109, 240, 0.15);
+    }
+
+    .search-box .icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      color: var(--grey);
+      pointer-events: none;
+    }
+
+    .year-tabs {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .year-tab {
+      padding: 8px 14px;
+      border: 1px solid var(--grey-line);
+      border-radius: 999px;
+      background: var(--paper-raised);
+      color: var(--ink-soft);
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .year-tab:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .year-tab.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .results-meta {
+      font-size: 0.85rem;
+      color: var(--grey);
+      margin-bottom: 14px;
+    }
+
+    .results-meta strong {
+      color: var(--ink-soft);
+    }
+
+    /* Lista de documentos */
+    .doc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--grey-line);
+      border: 1px solid var(--grey-line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .doc-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 18px;
+      background: var(--paper-raised);
+      cursor: pointer;
+      transition: background 0.12s;
+    }
+
+    .doc-item:hover {
+      background: var(--paper);
+    }
+
+    .doc-item-left {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .doc-item-title {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    .doc-item-meta {
+      font-size: 0.8rem;
+      color: var(--grey);
+    }
+
+    .doc-item-action {
+      flex-shrink: 0;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .doc-item:hover .doc-item-action {
+      text-decoration: underline;
+    }
+
+    .empty-state {
+      padding: 48px 24px;
+      text-align: center;
+      color: var(--grey);
+      background: var(--paper-raised);
+      border-radius: 8px;
+      border: 1px solid var(--grey-line);
+    }
+
+    /* ===== Modal / Popup nativo ===== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 18, 28, 0.55);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s, visibility 0.2s;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal {
+      background: var(--paper-raised);
+      border: 1px solid var(--grey-line);
+      border-radius: 12px;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+      transform: translateY(12px) scale(0.98);
+      transition: transform 0.22s ease;
+      overflow: hidden;
+    }
+
+    .modal-overlay.open .modal {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 20px 22px 12px;
+      border-bottom: 1px solid var(--grey-line);
+    }
+
+    .modal-title {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--ink);
+    }
+
+    .modal-close {
+      width: 32px;
+      height: 32px;
+      border: none;
+      background: transparent;
+      color: var(--grey);
+      font-size: 1.4rem;
+      line-height: 1;
+      cursor: pointer;
+      border-radius: 6px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-close:hover {
+      background: var(--grey-line);
+      color: var(--ink);
+    }
+
+    .modal-body {
+      padding: 18px 22px 24px;
+    }
+
+    .modal-meta {
+      font-size: 0.85rem;
+      color: var(--grey);
+      margin-bottom: 18px;
+    }
+
+    .modal-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-deep);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      background: transparent;
+      color: var(--ink-soft);
+      border: 1px solid var(--grey-line);
+      border-radius: 8px;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .modal-note {
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: var(--grey);
+      line-height: 1.45;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .colecciones-page { padding: 20px 14px 60px; }
+      .doc-item { padding: 12px 14px; }
+      .doc-item-title { font-size: 0.98rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Topbar minimal (puedes reemplazar por el header global del sitio) -->
+  <header class="topbar" style="position:relative; height:auto; padding:14px 28px;">
+    <div class="topbar-left">
+      <a href="../" style="font-size:0.9rem; color:var(--ink-soft);">← Volver al inicio</a>
+    </div>
+    <div class="topbar-center">
+      <a class="brand" href="../">
+        <span class="brand-name">CorpusChile</span>
+      </a>
+    </div>
+    <div class="topbar-actions">
+      <button type="button" class="theme-btn" id="themeBtn" title="Cambiar tema" aria-label="Cambiar tema">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="colecciones-page">
+    <div class="colecciones-header">
+      <h1>Colecciones — Diario Oficial</h1>
+      <p>
+        Ediciones del Diario Oficial de Chile con texto OCR.
+        Incluye 1990, 2000 y 2001. Usa el buscador o los filtros por año.
+      </p>
+    </div>
+
+    <div class="filters-bar">
+      <div class="search-box">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
+        </svg>
+        <input type="search" id="searchInput" placeholder="Buscar por fecha (ej: 15/03/2000 o 2000-03)…" autocomplete="off">
+      </div>
+      <div class="year-tabs" id="yearTabs">
+        <button type="button" class="year-tab active" data-year="all">Todos</button>
+        <button type="button" class="year-tab" data-year="2001">2001</button>
+        <button type="button" class="year-tab" data-year="2000">2000</button>
+        <button type="button" class="year-tab" data-year="1990">1990</button>
+      </div>
+    </div>
+
+    <div class="results-meta" id="resultsMeta">Cargando…</div>
+
+    <div class="doc-list" id="docList" role="list"></div>
+    <div class="empty-state" id="emptyState" hidden>
+      No se encontraron documentos con ese criterio.
+    </div>
+  </main>
+
+  <!-- Modal / Popup nativo -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle">—</h2>
+        <button type="button" class="modal-close" id="modalClose" aria-label="Cerrar">×</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-meta" id="modalMeta"></p>
+        <div class="modal-actions">
+          <a class="btn-primary" id="modalOpenLink" href="#" target="_blank" rel="noopener">
+            Abrir PDF en Drive →
+          </a>
+          <button type="button" class="btn-secondary" id="modalCopyLink">Copiar enlace</button>
+        </div>
+        <p class="modal-note">
+          El documento se abre en Google Drive. CorpusChile solo indexa el acceso;
+          la versión oficial sigue siendo la del Diario Oficial.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ===== Datos (generados desde la lista que me pasaste) =====
+    // En producción puedes cargar esto desde un JSON externo:
+    // fetch('../json/diario_oficial.json').then(r => r.json()).then(...)
+    const DOCS = PLACEHOLDER_DOCS;
+
+    // ===== Estado =====
+    let currentYear = "all";
+    let currentQuery = "";
+
+    // ===== Elementos =====
+    const searchInput   = document.getElementById("searchInput");
+    const yearTabs      = document.getElementById("yearTabs");
+    const docList       = document.getElementById("docList");
+    const emptyState    = document.getElementById("emptyState");
+    const resultsMeta   = document.getElementById("resultsMeta");
+    const modalOverlay  = document.getElementById("modalOverlay");
+    const modalTitle    = document.getElementById("modalTitle");
+    const modalMeta     = document.getElementById("modalMeta");
+    const modalOpenLink = document.getElementById("modalOpenLink");
+    const modalCopyLink = document.getElementById("modalCopyLink");
+    const modalClose    = document.getElementById("modalClose");
+
+    // ===== Filtrado =====
+    function filterDocs() {
+      const q = currentQuery.trim().toLowerCase()
+        .replace(/\//g, "-")
+        .replace(/\s+/g, "");
+
+      return DOCS.filter(doc => {
+        if (currentYear !== "all" && doc.year !== currentYear) return false;
+        if (!q) return true;
+
+        // Busca en fecha, título y filename
+        const haystack = (
+          doc.date + " " +
+          doc.title + " " +
+          doc.filename + " " +
+          doc.day + "/" + doc.month + "/" + doc.year
+        ).toLowerCase();
+
+        return haystack.includes(q);
+      });
+    }
+
+    // ===== Render =====
+    function render() {
+      const filtered = filterDocs();
+
+      resultsMeta.innerHTML = filtered.length === 0
+        ? "0 documentos"
+        : `<strong>${filtered.length}</strong> documento${filtered.length === 1 ? "" : "s"}`;
+
+      if (filtered.length === 0) {
+        docList.innerHTML = "";
+        emptyState.hidden = false;
+        return;
+      }
+
+      emptyState.hidden = true;
+      docList.innerHTML = filtered.map(doc => `
+        <div class="doc-item" role="listitem" data-id="${doc.id}" tabindex="0">
+          <div class="doc-item-left">
+            <span class="doc-item-title">${doc.title}</span>
+            <span class="doc-item-meta">${doc.filename}</span>
+          </div>
+          <span class="doc-item-action">Ver →</span>
+        </div>
+      `).join("");
+
+      // Eventos de clic / teclado
+      docList.querySelectorAll(".doc-item").forEach(el => {
+        el.addEventListener("click", () => openModal(el.dataset.id));
+        el.addEventListener("keydown", e => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openModal(el.dataset.id);
+          }
+        });
+      });
+    }
+
+    // ===== Modal =====
+    function openModal(id) {
+      const doc = DOCS.find(d => d.id === id);
+      if (!doc) return;
+
+      modalTitle.textContent = doc.title;
+      modalMeta.textContent = `${doc.filename} · ${doc.date}`;
+      modalOpenLink.href = doc.url;
+      modalOverlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+      modalClose.focus();
+    }
+
+    function closeModal() {
+      modalOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    modalClose.addEventListener("click", closeModal);
+    modalOverlay.addEventListener("click", e => {
+      if (e.target === modalOverlay) closeModal();
+    });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape" && modalOverlay.classList.contains("open")) closeModal();
+    });
+
+    modalCopyLink.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(modalOpenLink.href);
+        modalCopyLink.textContent = "¡Copiado!";
+        setTimeout(() => modalCopyLink.textContent = "Copiar enlace", 1600);
+      } catch {
+        modalCopyLink.textContent = "Error al copiar";
+      }
+    });
+
+    // ===== Eventos de filtros =====
+    searchInput.addEventListener("input", () => {
+      currentQuery = searchInput.value;
+      render();
+    });
+
+    yearTabs.addEventListener("click", e => {
+      const btn = e.target.closest(".year-tab");
+      if (!btn) return;
+      yearTabs.querySelectorAll(".year-tab").forEach(t => t.classList.remove("active"));
+      btn.classList.add("active");
+      currentYear = btn.dataset.year;
+      render();
+    });
+
+    // ===== Tema (reutiliza lógica del sitio si existe) =====
+    const themeBtn = document.getElementById("themeBtn");
+    if (themeBtn) {
+      themeBtn.addEventListener("click", () => {
+        const html = document.documentElement;
+        const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        html.setAttribute("data-theme", next);
+        localStorage.setItem("corpus-theme", next);
+      });
+      // Restaurar preferencia
+      const saved = localStorage.getItem("corpus-theme");
+      if (saved) document.documentElement.setAttribute("data-theme", saved);
+    }
+
+    // ===== Inicio =====
+    render();
+  </script>
+</body>
+</html>
